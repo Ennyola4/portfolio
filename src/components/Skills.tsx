@@ -1,4 +1,4 @@
-import { Code2, Database, Globe, Server, Smartphone, Wrench } from "lucide-react";
+import { Code2, Database, Globe, Server } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -11,23 +11,14 @@ const skillCategories = [
   {
     title: "Backend",
     icon: Server,
-    skills: ["Node.js", "Express", "Python", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "Express",  "REST APIs"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Supabase"],
+    skills: ["PostgreSQL", "MongoDB",  "Prisma", "Supabase"],
   },
-  {
-    title: "Mobile",
-    icon: Smartphone,
-    skills: ["React Native", "Expo", "iOS", "Android"],
-  },
-  {
-    title: "DevOps",
-    icon: Wrench,
-    skills: ["Docker", "AWS", "Vercel", "CI/CD", "Linux"],
-  },
+ 
   {
     title: "Other",
     icon: Code2,
