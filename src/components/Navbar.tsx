@@ -61,7 +61,7 @@ const Navbar = () => {
             href="#"
             className="text-xl font-semibold tracking-tight "
           >
-            <span className="bg-[#D8C99B] p-2 rounded-full font-bold hover:bg-[#D8C99B]/80">EA</span>
+            <span className="bg-[#D8C99B] animate-pulse p-2 rounded-full font-bold hover:bg-[#D8C99B]/80">EA</span>
           </a>
 
           {/* Desktop Nav */}
