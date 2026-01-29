@@ -145,6 +145,7 @@ const Navbar = () => {
             <span>React</span>
             <span>Tailwind CSS</span>
             <span>Bootstrap</span>
+            <span>Redux</span>
             <span>Node.js</span>
             <span>Express</span>
             <span>MongoDB</span>
