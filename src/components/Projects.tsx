@@ -10,7 +10,7 @@ const featuredProjects = [
     tech: ["React", "NextJs", "Prisma", "Tailwind", "TypeScript"],
     Address: "business.alertmfb.com.ng",
     href: "https://business.alertmfb.com.ng/welcome",
-    image: "/public/businessBanking.png",
+    image: "/businessBanking.png",
   },
   {
     title: "Alert Group Scholarship Portal",
