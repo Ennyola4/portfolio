@@ -45,161 +45,231 @@ const mobileMenuVariants: Variants = {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
-  const handleDownloadResume = () => {
+const handleDownloadResume = () => {
   const resumeHTML = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Enitan Ajayi - Frontend Engineer Resume</title>
-      <style>
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          margin: 40px;
-          color: #1f2937;
-          line-height: 1.6;
-          background: #f9fafb;
-        }
-        .resume-container {
-          max-width: 800px;
-          margin: auto;
-          background: white;
-          padding: 40px;
-          border-radius: 12px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .header {
-          text-align: center;
-          border-bottom: 2px solid #D8C99B;
-          padding-bottom: 20px;
-          margin-bottom: 30px;
-        }
-        .name {
-          font-size: 32px;
-          font-weight: bold;
-        }
-        .role {
-          font-size: 18px;
-          color: #6b7280;
-        }
-        .section {
-          margin-bottom: 30px;
-        }
-        .section-title {
-          font-size: 20px;
-          font-weight: bold;
-          color: #D8C99B;
-          margin-bottom: 10px;
-          border-bottom: 1px solid #e5e7eb;
-          padding-bottom: 5px;
-        }
-        ul {
-          padding-left: 20px;
-        }
-        li {
-          margin-bottom: 6px;
-        }
-        .skills span {
-          display: inline-block;
-          background: #f3f4f6;
-          padding: 6px 12px;
-          margin: 6px 6px 0 0;
-          border-radius: 20px;
-          font-size: 14px;
-        }
-        .footer {
-          text-align: center;
-          font-size: 13px;
-          color: #6b7280;
-          margin-top: 40px;
-        }
-      </style>
-    </head>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ajayi Kolade Enitan - Full Stack Developer Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px;
+      color: #1f2937;
+      line-height: 1.7;
+      background: #f9fafb;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 3px solid #D8C99B;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .name {
+      font-size: 34px;
+      font-weight: bold;
+    }
+    .role {
+      font-size: 18px;
+      color: #6b7280;
+      margin-top: 5px;
+    }
+    .contact {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .section {
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #D8C99B;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .skills span {
+      display: inline-block;
+      background: #f3f4f6;
+      padding: 7px 14px;
+      margin: 6px 6px 0 0;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    .two-column {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .two-column div {
+      flex: 1;
+      min-width: 260px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 
-    <body>
-      <div class="resume-container">
+<body>
+  <div class="resume-container">
 
-        <div class="header">
-          <div class="name">Ajayi Enitan</div>
-          <div class="role">Frontend Engineer</div>
-          <p>08102656596 • ajayi.enitan45@gmail.com</p>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Professional Summary</div>
-          <p>
-            Frontend Engineer with three years experience with strong experience building modern, responsive,
-            and user-focused web applications. Proficient in JavaScript, TypeScript,
-            React, and modern CSS frameworks, with backend knowledge using Node.js
-            and MongoDB.
-          </p>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Technical Skills</div>
-          <div class="skills">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript (ES6+)</span>
-            <span>TypeScript</span>
-            <span>React</span>
-            <span>Tailwind CSS</span>
-            <span>Bootstrap</span>
-            <span>Redux</span>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Projects</div>
-          <ul>
-            <li>
-              Built a responsive developer portfolio using React, Tailwind CSS,
-              and Framer Motion.
-            </li>
-            <li>
-              Developed reusable UI components and integrated REST APIs at AlertMFB.
-            </li>
-            <li>
-              Implemented clean, scalable frontend architecture with modern
-              JavaScript practices.
-            </li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Experience</div>
-          <p><strong>Frontend Engineer – Personal & Freelance Projects</strong></p>
-          <ul>
-            <li>Developed and maintained React-based web applications (Business Banking)</li>
-            <li>Collaborated with backend services using NextJs, Prisma Tailwind CSS and TypeScript</li>
-            <li>Ensured responsive, accessible, and cross-browser UI</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Education</div>
-          <p>New Horizon IT institution</p>
-        </div>
-
-        <div class="footer">
-          Resume downloaded on ${new Date().toLocaleDateString()}
-        </div>
-
+    <div class="header">
+      <div class="name">Ajayi Kolade Enitan</div>
+      <div class="role">Full Stack Developer | Frontend Engineer</div>
+      <div class="contact">
+        📧 ajayi.enitan45@gmail.com • 📞 08102656596 <br />
+        📍 4, Lola Fadeyibi Street, Yakoyo, Ojodu Berger
       </div>
-    </body>
-    </html>
+    </div>
+
+    <div class="section">
+      <div class="section-title">👨‍💻 Professional Summary</div>
+      <p>
+        Highly dedicated and innovative Full Stack Developer with strong expertise in
+        building user-centric web applications. Passionate about clean code,
+        modern web technologies, and delivering scalable, high-performance solutions.
+        Adept at working in fast-paced environments while continuously learning
+        and improving.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🎯 Career Objective</div>
+      <p>
+        To secure a challenging role as a Frontend or Full Stack Developer where I can
+        leverage my technical expertise, creativity, and problem-solving skills to
+        build impactful digital solutions while continuously growing professionally.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🛠️ Area of Expertise</div>
+      <ul>
+        <li>Web Application Development</li>
+        <li>Frontend Architecture & UI Engineering</li>
+        <li>Web Development Frameworks</li>
+        <li>Web Servers & Hosting</li>
+        <li>Continuous Learning & Optimization</li>
+        <li>Collaboration & Version Control (Git)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">💻 Technical Skills</div>
+      <div class="skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript (ES6+)</span>
+        <span>TypeScript</span>
+        <span>React</span>
+        <span>Redux</span>
+        <span>Tailwind CSS</span>
+        <span>Bootstrap</span>
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>MongoDB</span>
+        <span>WordPress</span>
+        <span>Git & GitHub</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🏢 Professional Experience</div>
+      <p><strong>Web Developer – Myt Travels</strong> (2023)</p>
+      <ul>
+        <li>Designed and developed a user-friendly and responsive interface for travel platforms.</li>
+        <li>Improved user experience through clean UI design and optimized navigation.</li>
+        <li>Worked with CMS tools to ensure scalability, content management, and maintainability.</li>
+        <li>Handled website functionality, updates, and ongoing maintenance.</li>
+      </ul>
+
+       <p><strong>Frontend Engineer – Alert Microfinance Bank</strong> (2025)</p>
+      <ul>
+        <li>Designed and developed a user-friendly and responsive interface for Banking platform.</li>
+        <li>Improved middleware through clean UI design and optimized navigation.</li>
+         <li>Built a user-friendly and accessible interface for Alert Group Scholarship Platform.</li>
+        <li>Worked with CMS tools to ensure scalability, content management, and maintainability.</li>
+        <li>Handled website functionality, updates, and ongoing maintenance.</li>
+      </ul>
+
+      <p><strong>Full Stack Developer</strong> (may 2023 – jan 2026)</p>
+      <ul>
+        <li>Built and maintained modern web applications using React and Node.js.</li>
+        <li>Optimized frontend performance and application scalability.</li>
+        <li>Collaborated effectively in dynamic development environments.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🧠 Soft Skills</div>
+      <ul>
+        <li>Problem Solving</li>
+        <li>Effective Communication</li>
+        <li>Time Management</li>
+        <li>Attention to Detail</li>
+        <li>Team Collaboration</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🎵 Hobbies & Interests</div>
+      <div class="two-column">
+        <div>
+          <ul>
+            <li>🎧 Music</li>
+            <li>⚽ Sports</li>
+            <li>💻 Coding & Programming</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>🤖 Robotics</li>
+            <li>🧠 Artificial Intelligence</li>
+            <li>🌐 Technology Innovation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📄 References</div>
+      <p>Available on request</p>
+    </div>
+
+    <div class="footer">
+      Resume downloaded on ${new Date().toLocaleDateString()}
+    </div>
+
+  </div>
+</body>
+</html>
   `;
 
-  // Create blob and download
   const blob = new Blob([resumeHTML], { type: "text/html" });
   const url = URL.createObjectURL(blob);
 
   const link = document.createElement("a");
   link.href = url;
-  link.download = "Enitan-Ajayi-Frontend-Engineer-Resume.html";
+  link.download = "Ajayi-Kolade-Enitan-Full-Stack-Developer-Resume.html";
 
   document.body.appendChild(link);
   link.click();
@@ -207,6 +277,7 @@ const Navbar = () => {
   document.body.removeChild(link);
   URL.revokeObjectURL(url);
 };
+
 
 
   return (

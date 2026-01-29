@@ -30,6 +30,16 @@ const featuredProjects = [
     href: "https://elancitravels.onrender.com/",
     image: "/elanciTravels.png",
   },
+  {
+  title: "Middleware Dashboard",
+  description:
+    "A centralized middleware dashboard designed to monitor, manage, and orchestrate system integrations, API workflows, and data exchanges across multiple services, providing real-time visibility, logging, and operational control.",
+  tech: ["React", "TailwindCSS", "TypeScript"],
+  Address: "middlewaredashboard.com",
+  href: "https://middlewaredashboard.vercel.app/",
+  image: "/middlewareDashboard.png",
+},
+
 ];
 
 
