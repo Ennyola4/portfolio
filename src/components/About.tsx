@@ -40,7 +40,7 @@ const About = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-xl overflow-hidden border-2 border-[#64ffda]">
             <img
-              src="https://www.mavenart.com/wp-blog/wp-content/uploads/2023/07/image17.png" 
+              src="https://media.craiyon.com/2024-09-19/pTqdzlorS-uGf367PYXzSA.webp" 
               alt="Enitan Ajayi"
               className="w-full h-full object-cover"
             />

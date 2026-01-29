@@ -1,32 +1,37 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Github, Folder, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+
 
 const featuredProjects = [
   {
-    title: "E-Commerce Platform",
+    title: "Business Banking",
     description:
-      "A full-featured e-commerce platform with user authentication, payment processing, and inventory management. Built with a modern tech stack for optimal performance.",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "A secure banking platform for AlertMFB that enables account management, fund transfers, transaction tracking, and role-based access control. Designed with a scalable architecture to support real-time operations, high availability, and enterprise-grade security.",
+    tech: ["React", "NextJs", "Prisma", "Tailwind", "TypeScript"],
+    Address: "business.alertmfb.com.ng",
+    href: "https://business.alertmfb.com.ng/welcome",
+    image: "src/assets/businessBanking.png",
   },
   {
-    title: "Task Management App",
+    title: "Alert Group Scholarship Portal",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team workspace features.",
-    tech: ["Next.js", "TypeScript", "Prisma", "WebSocket"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "A comprehensive scholarship management platform for Alert Group that allows applicants to submit applications, upload documents, and track application status in real time, while administrators manage reviews, approvals, and notifications.",
+    tech: ["React", "TypeScript", "Prisma", "TailwindCSS"],
+    Address: "alertscholarshiportal.com",
+    href: "https://alertscholarshiportal.vercel.app/",
+    image: "src/assets/alertPortal.png",
   },
   {
-    title: "Social Media Dashboard",
+    title: "Elanci Travels",
     description:
-      "An analytics dashboard for social media managers featuring data visualization, scheduled posting, and engagement tracking across multiple platforms.",
-    tech: ["React", "D3.js", "Express", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "A modern travel booking and management platform that allows users to explore destinations, plan trips, and manage travel reservations through an intuitive and responsive interface.",
+    tech: ["React", "TailwindCSS", "TypeScript"],
+    Address: "elancitravels.com",
+    href: "https://elancitravels.onrender.com/",
+    image: "src/assets/elanciTravels.png",
   },
 ];
+
 
 const otherProjects = [
   {
@@ -75,9 +80,8 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.title}
-              className={`relative grid md:grid-cols-12 gap-6 items-center ${
-                index % 2 === 1 ? "md:text-right" : ""
-              }`}
+              className={`relative grid md:grid-cols-12 gap-6 items-center ${index % 2 === 1 ? "md:text-right" : ""
+                }`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -85,29 +89,30 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div
-                className={`md:col-span-7 ${
-                  index % 2 === 1 ? "md:col-start-6" : ""
-                } relative group cursor-pointer`}
+                className={`md:col-span-7 ${index % 2 === 1 ? "md:col-start-6" : ""
+                  } relative group cursor-pointer`}
               >
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 1 }}
                   transition={{ duration: 0.3 }}
                   className="aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-gradient-to-br from-[#0f172a] to-[#0a192f]"
                 >
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#64ffda]/20 to-[#64ffda]/10">
-                    <Folder size={64} className="text-[#64ffda]/50" />
-                  </div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+
                   <div className="absolute inset-0 bg-[#64ffda]/20 group-hover:bg-transparent transition-colors duration-300" />
                 </motion.div>
               </div>
 
               {/* Project Content */}
               <div
-                className={`md:col-span-6 ${
-                  index % 2 === 1
-                    ? "md:col-start-1 md:row-start-1"
-                    : "md:col-start-7"
-                } md:absolute md:inset-0 flex flex-col justify-center px-4 md:px-0`}
+                className={`md:col-span-6 ${index % 2 === 1
+                  ? "md:col-start-1 md:row-start-1"
+                  : "md:col-start-7"
+                  } md:absolute md:inset-0 flex flex-col justify-center px-4 md:px-0`}
               >
                 <p className="text-[#64ffda] font-mono text-sm mb-2">
                   Featured Project
@@ -121,36 +126,25 @@ const Projects = () => {
                   </p>
                 </div>
                 <ul
-                  className={`flex flex-wrap gap-3 mb-4 text-sm font-mono text-gray-400 ${
-                    index % 2 === 1 ? "md:justify-end" : ""
-                  }`}
+                  className={`flex flex-wrap gap-3 mb-6 text-sm font-mono text-gray-400 ${index % 2 === 1 ? "md:justify-end" : ""
+                    }`}
                 >
                   {project.tech.map((tech) => (
                     <li key={tech}>{tech}</li>
                   ))}
                 </ul>
-                <div
-                  className={`flex gap-4 ${
-                    index % 2 === 1 ? "md:justify-end" : ""
-                  }`}
-                >
+                <div className={`flex gap-3 items-center ${index % 2 === 1 ? "md:justify-end" : ""}`}>
                   <a
-                    href={project.github}
+                    href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-[#64ffda] transition-colors"
+                    className="flex items-center gap-2 text-[#64ffda] hover:underline"
                   >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-[#64ffda] transition-colors"
-                  >
-                    <ExternalLink size={20} />
+                    <MapPin size={22} className="animate-bounce" />
+                    <span>{project.Address}</span>
                   </a>
                 </div>
+
               </div>
             </motion.div>
           ))}
