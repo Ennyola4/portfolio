@@ -136,13 +136,13 @@ const handleDownloadResume = () => {
       <div class="name">Ajayi Kolade Enitan</div>
       <div class="role">Full Stack Developer | Frontend Engineer</div>
       <div class="contact">
-        📧 ajayi.enitan45@gmail.com • 📞 08102656596 <br />
-        📍 4, Lola Fadeyibi Street, Yakoyo, Ojodu Berger
+         ajayi.enitan45@gmail.com * 08102656596 <br />
+         4, Lola Fadeyibi Street, Yakoyo, Ojodu Berger
       </div>
     </div>
 
     <div class="section">
-      <div class="section-title">👨‍💻 Professional Summary</div>
+      <div class="section-title"> Professional Summary</div>
       <p>
         Highly dedicated and innovative Full Stack Developer with strong expertise in
         building user-centric web applications. Passionate about clean code,
@@ -153,7 +153,7 @@ const handleDownloadResume = () => {
     </div>
 
     <div class="section">
-      <div class="section-title">🎯 Career Objective</div>
+      <div class="section-title">Career Objective</div>
       <p>
         To secure a challenging role as a Frontend or Full Stack Developer where I can
         leverage my technical expertise, creativity, and problem-solving skills to
@@ -162,7 +162,7 @@ const handleDownloadResume = () => {
     </div>
 
     <div class="section">
-      <div class="section-title">🛠️ Area of Expertise</div>
+      <div class="section-title"> Area of Expertise</div>
       <ul>
         <li>Web Application Development</li>
         <li>Frontend Architecture & UI Engineering</li>
@@ -174,7 +174,7 @@ const handleDownloadResume = () => {
     </div>
 
     <div class="section">
-      <div class="section-title">💻 Technical Skills</div>
+      <div class="section-title"> Technical Skills</div>
       <div class="skills">
         <span>HTML5</span>
         <span>CSS3</span>
@@ -193,7 +193,7 @@ const handleDownloadResume = () => {
     </div>
 
     <div class="section">
-      <div class="section-title">🏢 Professional Experience</div>
+      <div class="section-title"> Professional Experience</div>
       <p><strong>Web Developer – Myt Travels</strong> (2023)</p>
       <ul>
         <li>Designed and developed a user-friendly and responsive interface for travel platforms.</li>
@@ -220,7 +220,7 @@ const handleDownloadResume = () => {
     </div>
 
     <div class="section">
-      <div class="section-title">🧠 Soft Skills</div>
+      <div class="section-title"> Soft Skills</div>
       <ul>
         <li>Problem Solving</li>
         <li>Effective Communication</li>
@@ -231,27 +231,27 @@ const handleDownloadResume = () => {
     </div>
 
     <div class="section">
-      <div class="section-title">🎵 Hobbies & Interests</div>
+      <div class="section-title"> Hobbies & Interests</div>
       <div class="two-column">
         <div>
           <ul>
-            <li>🎧 Music</li>
-            <li>⚽ Sports</li>
-            <li>💻 Coding & Programming</li>
+            <li> Music</li>
+            <li> Sports</li>
+            <li> Coding & Programming</li>
           </ul>
         </div>
         <div>
           <ul>
-            <li>🤖 Robotics</li>
-            <li>🧠 Artificial Intelligence</li>
-            <li>🌐 Technology Innovation</li>
+            <li> Robotics</li>
+            <li> Artificial Intelligence</li>
+            <li> Technology Innovation</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="section">
-      <div class="section-title">📄 References</div>
+      <div class="section-title"> References</div>
       <p>Available on request</p>
     </div>
 
