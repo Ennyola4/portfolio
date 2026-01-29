@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 
 
 const featuredProjects = [
+    {
+    title: "Alert Group Scholarship Portal",
+    description:
+      "A comprehensive scholarship management platform for Alert Group that allows applicants to submit applications, upload documents, and track application status in real time, while administrators manage reviews, approvals, and notifications.",
+    tech: ["React", "TypeScript", "Prisma", "TailwindCSS"],
+    Address: "alertscholarshiportal.com",
+    href: "https://alertscholarshiportal.vercel.app/",
+    image: "/alertPortal.png",
+  },
   {
     title: "Business Banking",
     description:
@@ -11,15 +20,6 @@ const featuredProjects = [
     Address: "business.alertmfb.com.ng",
     href: "https://business.alertmfb.com.ng/welcome",
     image: "/businessBanking.png",
-  },
-  {
-    title: "Alert Group Scholarship Portal",
-    description:
-      "A comprehensive scholarship management platform for Alert Group that allows applicants to submit applications, upload documents, and track application status in real time, while administrators manage reviews, approvals, and notifications.",
-    tech: ["React", "TypeScript", "Prisma", "TailwindCSS"],
-    Address: "alertscholarshiportal.com",
-    href: "https://alertscholarshiportal.vercel.app/",
-    image: "/alertPortal.png",
   },
   {
     title: "Elanci Travels",
