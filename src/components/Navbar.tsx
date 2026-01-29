@@ -280,8 +280,7 @@ const Navbar = () => {
               ))}
 
               <a
-                href="/resume.pdf"
-                target="_blank"
+               onClick={handleDownloadResume}
                 className="mt-6 w-fit px-5 py-2 border border-[#64ffda] rounded text-[#64ffda]"
               >
                 Resume
