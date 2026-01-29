@@ -10,7 +10,7 @@ const featuredProjects = [
     tech: ["React", "NextJs", "Prisma", "Tailwind", "TypeScript"],
     Address: "business.alertmfb.com.ng",
     href: "https://business.alertmfb.com.ng/welcome",
-    image: "src/assets/businessBanking.png",
+    image: "/public/businessBanking.png",
   },
   {
     title: "Alert Group Scholarship Portal",
@@ -19,7 +19,7 @@ const featuredProjects = [
     tech: ["React", "TypeScript", "Prisma", "TailwindCSS"],
     Address: "alertscholarshiportal.com",
     href: "https://alertscholarshiportal.vercel.app/",
-    image: "src/assets/alertPortal.png",
+    image: "/public/alertPortal.png",
   },
   {
     title: "Elanci Travels",
@@ -28,7 +28,7 @@ const featuredProjects = [
     tech: ["React", "TailwindCSS", "TypeScript"],
     Address: "elancitravels.com",
     href: "https://elancitravels.onrender.com/",
-    image: "src/assets/elanciTravels.png",
+    image: "/public/elanciTravels.png",
   },
 ];
 
