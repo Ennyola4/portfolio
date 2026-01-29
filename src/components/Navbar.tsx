@@ -120,7 +120,7 @@ const Navbar = () => {
       <div class="resume-container">
 
         <div class="header">
-          <div class="name">Enitan Ajayi</div>
+          <div class="name">Ajayi Enitan</div>
           <div class="role">Frontend Engineer</div>
           <p>08102656596 • ajayi.enitan45@gmail.com</p>
         </div>
