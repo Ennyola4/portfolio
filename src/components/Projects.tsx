@@ -19,7 +19,7 @@ const featuredProjects = [
     tech: ["React", "TypeScript", "Prisma", "TailwindCSS"],
     Address: "alertscholarshiportal.com",
     href: "https://alertscholarshiportal.vercel.app/",
-    image: "/public/alertPortal.png",
+    image: "/alertPortal.png",
   },
   {
     title: "Elanci Travels",
@@ -28,7 +28,7 @@ const featuredProjects = [
     tech: ["React", "TailwindCSS", "TypeScript"],
     Address: "elancitravels.com",
     href: "https://elancitravels.onrender.com/",
-    image: "/public/elanciTravels.png",
+    image: "/elanciTravels.png",
   },
 ];
 
