@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const featuredProjects = [
     {
-    title: "Alert Group Scholarship Portal",
+    title: "(UI)Alert Group Scholarship Portal",
     description:
       "A comprehensive scholarship management platform for Alert Group that allows applicants to submit applications, upload documents, and track application status in real time, while administrators manage reviews, approvals, and notifications.",
     tech: ["React", "TypeScript", "Prisma", "TailwindCSS"],
@@ -13,7 +13,7 @@ const featuredProjects = [
     image: "/alertPortal.png",
   },
   {
-    title: "Business Banking",
+    title: "(LIVE)Business Banking",
     description:
       "A secure banking platform for AlertMFB that enables account management, fund transfers, transaction tracking, and role-based access control. Designed with a scalable architecture to support real-time operations, high availability, and enterprise-grade security.",
     tech: ["React", "NextJs", "Prisma", "Tailwind", "TypeScript"],
@@ -31,7 +31,7 @@ const featuredProjects = [
     image: "/elanciTravels.png",
   },
   {
-  title: "Middleware Dashboard",
+  title: "(UI)Middleware Dashboard",
   description:
     "A centralized middleware dashboard designed to monitor, manage, and orchestrate system integrations, API workflows, and data exchanges across multiple services, providing real-time visibility, logging, and operational control.",
   tech: ["React", "TailwindCSS", "TypeScript"],
