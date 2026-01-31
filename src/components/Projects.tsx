@@ -80,7 +80,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-[#64ffda] font-mono text-xl">03.</span>
+          <span className="text-[#64ffda] font-mono text-xl">02.</span>
           Some Things I've Built
           <span className="h-px bg-gray-600 flex-1" />
         </motion.h2>
@@ -113,7 +113,7 @@ const Projects = () => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-[#64ffda]/20 group-hover:bg-transparent transition-colors duration-300" />
+                  <div className="absolute inset-0  group-hover:bg-transparent transition-colors duration-300" />
                 </motion.div>
               </div>
 
