@@ -357,6 +357,7 @@ const handleDownloadResume = () => {
                onClick={handleDownloadResume}
                 className="mt-6 w-fit px-5 py-2 border border-[#64ffda] rounded text-[#64ffda]"
               >
+                <ArrowBigDown className="w-4 h-4 inline mr-1 animate-bounce" />
                 Resume
               </a>
             </div>
