@@ -133,7 +133,7 @@ const handleDownloadResume = () => {
   <div class="resume-container">
 
     <div class="header">
-      <div class="name">Ajayi Kolade Enitan</div>
+      <div class="name">AJAYI KOLADE ENITAN</div>
       <div class="role">Full Stack Developer | Frontend Engineer</div>
       <div class="contact">
          ajayi.enitan45@gmail.com * 08102656596 <br />
@@ -177,11 +177,13 @@ const handleDownloadResume = () => {
       <div class="section-title"> Technical Skills</div>
       <div class="skills">
         <span>HTML5</span>
+        <span>Bootstrap</span>
         <span>CSS3</span>
         <span>JavaScript (ES6+)</span>
         <span>TypeScript</span>
         <span>React</span>
-        <span>Redux</span>
+        <span>Redux toolkit</span>
+        <span>Zustand</span> 
         <span>Tailwind CSS</span>
         <span>Bootstrap</span>
         <span>Node.js</span>
