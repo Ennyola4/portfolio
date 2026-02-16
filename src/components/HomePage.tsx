@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
 const HomePage = () => {
-    const fullName = "Ajayi Enitan...."
+    const fullName = "Enitan Ajayi...."
     const [displayedText, setDisplayedText] = useState("")
     const [index, setIndex] = useState(0)
 
