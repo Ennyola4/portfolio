@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/700.css"; 
+
 
 
 :root {
@@ -6,8 +9,11 @@
   
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
-  background-color: var(--bg-main);
-  color: #1f2937; 
+  font-family: 'Poppins', sans-serif;
 }

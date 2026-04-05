@@ -1,55 +1,91 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="relative py-20 bg-[#0a192f] text-gray-300">
-      <div className="max-w-6xl mx-auto px-6 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        {/* LEFT: Text */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#D8C99B] mb-4">
+    <section id="about" className="py-24 bg-white text-gray-900">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+        {/* LEFT */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight">
             About Me
           </h2>
-          <p className="text-gray-400 mb-4">
-            Hi! I’m <span className="text-[#64ffda] font-semibold">Enitan Ajayi</span>, a software developer passionate about building beautiful and functional digital experiences. I specialize in full-stack web development and enjoy turning complex problems into elegant solutions.
+
+          <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+            I’m <span className="font-semibold text-black">Enitan Ajayi</span>,
+            a software developer focused on building modern, scalable, and
+            high-performance web applications.
           </p>
 
-          <p className="text-gray-400 mb-4">
-            I’m experienced in modern technologies including <span className="text-[#64ffda] font-medium">React, Node.js, TypeScript, TailwindCSS</span>, and more. I focus on writing clean, maintainable code while creating responsive, accessible, and performant applications.
+          <p className="mt-4 text-gray-600 text-lg leading-relaxed max-w-xl">
+            I specialize in <span className="font-medium text-black">React, TypeScript, Node.js</span> and
+            love creating clean user interfaces with great user experience.
           </p>
 
-          <p className="text-gray-400 mb-6">
-            When I’m not coding, I love exploring new technologies, contributing to open-source projects, and learning new design patterns that improve both user experience and developer experience.
+          <p className="mt-4 text-gray-600 text-lg leading-relaxed max-w-xl">
+            My goal is simple — build products that not only work well but feel
+            great to use.
           </p>
 
-          {/* Social Links */}
-          <div className="flex gap-4 mt-6">
-            <a href="https://github.com/" target="_blank" className="text-[#64ffda] hover:text-white transition">
-              <Github size={20} />
+          {/* SOCIALS */}
+          <div className="flex gap-4 mt-8">
+            <a
+              href="https://github.com/Ennyola4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition"
+            >
+              <Github size={18} />
             </a>
-            <a href="https://linkedin.com/" target="_blank" className="text-[#64ffda] hover:text-white transition">
-              <Linkedin size={20} />
+            <a
+              href="https://www.linkedin.com/in/enitan-ajayi-02829a3a7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition"
+            >
+              <Linkedin size={18} />
             </a>
-            <a href="mailto:example@email.com" className="text-[#64ffda] hover:text-white transition">
-              <Mail size={20} />
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition"
+            >
+              <Mail size={18} />
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        {/* RIGHT: Image / Illustration */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-xl overflow-hidden border-2 border-[#64ffda]">
+        {/* RIGHT */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <div className="relative">
+            {/* Background card */}
+            <div className="absolute -top-6 -left-6 w-full h-full bg-gray-100 rounded-2xl" />
+
+            {/* Image */}
             <img
-              src="https://media.craiyon.com/2024-09-19/pTqdzlorS-uGf367PYXzSA.webp" 
+              src="https://media.craiyon.com/2024-09-19/pTqdzlorS-uGf367PYXzSA.webp"
               alt="Enitan Ajayi"
-              className="w-full h-full object-cover"
+              className="relative w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl shadow-lg"
             />
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

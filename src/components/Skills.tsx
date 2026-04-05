@@ -1,6 +1,5 @@
 import { Code2, Database, Globe, Server } from "lucide-react";
-import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const skillCategories = [
   {
@@ -11,14 +10,13 @@ const skillCategories = [
   {
     title: "Backend",
     icon: Server,
-    skills: ["Node.js", "Express",  "REST APIs"],
+    skills: ["Node.js", "Express", "REST APIs"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB",  "Prisma", "Supabase"],
+    skills: ["PostgreSQL", "MongoDB", "Prisma", "Supabase"],
   },
- 
   {
     title: "Other",
     icon: Code2,
@@ -26,82 +24,64 @@ const skillCategories = [
   },
 ];
 
-// 🔹 Animation variants
-const containerVariants = {
+// Animation Variants
+const containerVariants: Variants = {
   hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
-
-
 const itemVariants: Variants = {
-  hidden: { opacity: 0, x: -10 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.4,
-      ease: [0.4, 0, 0.2, 1], 
-    },
-  },
+  hidden: { opacity: 0, y: 6 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } },
 };
 
 const Skills = () => {
   return (
-    <section className="relative py-24 px-6 bg-[#0a192f] text-gray-300 overflow-hidden">
-      {/* SVG background */}
-      <svg
-        className="absolute bottom-0 left-0 w-full h-[110vh] -z-10"
-        viewBox="0 0 1440 320"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,160 C240,220 480,260 720,240 960,220 1200,160 1440,120 L1440,320 L0,320 Z"
-          fill="#64ffda"
-          opacity="0.15"
-        />
-      </svg>
+    <section className="relative py-24 px-6 bg-white text-gray-800 overflow-hidden">
+      {/* Abstract Shapes */}
+      <div className="absolute -top-20 -left-40 w-96 h-96 rounded-full bg-[#64ffda]/10 blur-3xl animate-pulse" />
+      <div className="absolute -bottom-32 -right-20 w-80 h-80 rounded-full bg-[#D8C99B]/10 blur-2xl animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#64ffda]/5 blur-2xl" />
 
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10">
         {/* Section Title */}
         <motion.h2
-          className="flex items-center gap-4 text-2xl md:text-3xl font-bold text-[#D8C99B] mb-12"
+          className="flex items-center gap-4 text-2xl md:text-3xl font-bold text-[#D8C99B] mb-16"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-[#64ffda] font-mono text-xl">02.</span>
+          <span className="text-[#64ffda] font-mono text-xl">03.</span>
           Skills & Technologies
-          <span className="h-px bg-gray-600 flex-1 max-w-xs" />
+          <span className="h-px bg-gray-300 flex-1 max-w-xs" />
         </motion.h2>
 
-        {/* Skill Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Skill Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="p-6 bg-[#0f172a]/50 rounded-lg border border-gray-700 hover:border-[#64ffda]/50 shadow-lg transition-all duration-300 group cursor-pointer"
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              className="relative p-6 bg-gray-50 rounded-2xl border border-gray-200 shadow-lg hover:shadow-[#64ffda]/20 transition-all duration-300 group cursor-pointer overflow-hidden"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <category.icon className="text-[#64ffda]" size={24} />
-                <h3 className="text-lg font-semibold text-[#D8C99B]">
+              {/* Glow Layer on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#64ffda]/20 to-[#D8C99B]/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl blur-xl pointer-events-none" />
+
+              <div className="flex items-center gap-3 mb-4 relative z-10">
+                <category.icon className="text-[#64ffda]" size={26} />
+                <h3 className="text-lg md:text-xl font-semibold text-[#D8C99B]">
                   {category.title}
                 </h3>
               </div>
 
               {/* Staggered Skills */}
               <motion.ul
-                className="space-y-2"
+                className="space-y-2 relative z-10"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="show"
@@ -111,7 +91,7 @@ const Skills = () => {
                   <motion.li
                     key={skill}
                     variants={itemVariants}
-                    className="text-gray-400 text-sm flex items-center gap-2 hover:text-[#64ffda] transition-colors"
+                    className="text-gray-600 text-sm flex items-center gap-2 hover:text-[#64ffda] transition-colors"
                     whileHover={{ x: 6 }}
                   >
                     <span className="w-2 h-2 bg-[#64ffda] rounded-full" />

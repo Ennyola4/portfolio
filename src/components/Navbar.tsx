@@ -1,12 +1,12 @@
-import { useState } from "react";
+ import { useState } from "react";
 import { ArrowBigDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 const navItems = [
-  { label: "01. About", href: "#about" },
-  { label: "02. Skills", href: "#skills" },
-  { label: "03. Projects", href: "#projects" },
-  { label: "04. Contact", href: "#contact" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const navVariants: Variants = {
@@ -286,7 +286,7 @@ const handleDownloadResume = () => {
     <>
       {/* NAVBAR */}
       <motion.nav
-        className="fixed top-0 left-0 w-full z-50 bg-main backdrop-blur border-b shadow-lg"
+        className="fixed top-0 left-0 w-full z-50 bg-main backdrop-blur shadow-sm"
         variants={navVariants}
         initial="hidden"
         animate="visible"
@@ -297,7 +297,7 @@ const handleDownloadResume = () => {
             href="#"
             className="text-xl font-semibold tracking-tight "
           >
-            <span className="bg-[#D8C99B] animate-pulse p-2 rounded-full font-bold hover:bg-[#D8C99B]/80">EA</span>
+            <span className="font-bold hover:bg-[#D8C99B]/80">Enitan</span>
           </a>
 
           {/* Desktop Nav */}
@@ -306,7 +306,7 @@ const handleDownloadResume = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-[#D8C99B] hover:text-gray-200 transition"
+                className="text-sm font-medium  hover:text-gray-200 transition"
               >
                 {item.label}
               </a>
@@ -314,7 +314,7 @@ const handleDownloadResume = () => {
 
             <a
             onClick={handleDownloadResume}
-              className="px-4 py-2 cursor-pointer text-sm text-[#D8C99B] font-medium border border-[#D8C99B] rounded-lg hover:bg-gray-900 transition"
+              className="px-4 py-2 cursor-pointer text-sm text-white font-medium bg-blue-500 rounded-lg hover:bg-blue-600 transition"
             >
               <ArrowBigDown className="w-4 h-4 inline mr-1 animate-bounce" />
               Resume
@@ -324,7 +324,7 @@ const handleDownloadResume = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-[#D8C99B]"
+            className="md:hidden text-black hover:text-gray-700 transition"
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -335,7 +335,7 @@ const handleDownloadResume = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed top-0 right-0 h-screen w-3/4 max-w-sm bg-[#0a192f] z-40 shadow-xl md:hidden"
+            className="fixed top-0 right-0 h-screen w-3/4 max-w-sm bg-white z-40 shadow-xl md:hidden"
             variants={mobileMenuVariants}
             initial="hidden"
             animate="visible"
@@ -347,7 +347,7 @@ const handleDownloadResume = () => {
                   key={item.label}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-medium text-[#D8C99B]"
+                  className="text-lg "
                 >
                   {item.label}
                 </a>
@@ -355,7 +355,7 @@ const handleDownloadResume = () => {
 
               <a
                onClick={handleDownloadResume}
-                className="mt-6 w-fit px-5 py-2 border border-[#64ffda] rounded text-[#64ffda]"
+                className="mt-6 w-fit px-5 py-2 text-white font-medium bg-blue-500 rounded-md hover:bg-blue-600 transition"
               >
                 <ArrowBigDown className="w-4 h-4 inline mr-1 animate-bounce" />
                 Resume
