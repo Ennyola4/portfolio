@@ -39,6 +39,15 @@ const featuredProjects = [
   href: "https://middlewaredashboard.vercel.app/",
   image: "/middlewareDashboard.png",
 },
+{
+  title: "(Live)Goldbucks website",
+  description:
+    "Goldbucks is a revolutionary investment app from Alert Microfinance Bank that allows you to save and invest in different financial products. We offer various investment options including Target Savings, Lock Fund, Group Savings, and Fixed Savings, all designed to help you grow your wealth with competitive returns and professional management.",
+  tech: ["React", "TailwindCSS", "TypeScript"],
+  Address: "https://www.goldbucks.alertmfb.com.ng/",
+  href: "https://www.goldbucks.alertmfb.com.ng/",
+  image: "/goldbucks.png",
+},
 
 ];
 
