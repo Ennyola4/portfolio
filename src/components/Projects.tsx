@@ -43,7 +43,6 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-[#64ffda] font-mono text-xl">02.</span>
           Some Things I've Built
           <span className="h-px bg-gray-300 flex-1" />
         </motion.h2>

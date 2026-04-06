@@ -39,15 +39,16 @@ const About = () => {
               href="https://github.com/Ennyola4"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition"
+              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-200  transition transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
             >
               <Github size={18} />
+              
             </a>
             <a
               href="https://www.linkedin.com/in/enitan-ajayi-02829a3a7/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition"
+              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-200 transition  transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
             >
               <Linkedin size={18} />
             </a>
@@ -55,7 +56,7 @@ const About = () => {
               href="https://mail.google.com/mail/u/0/#inbox"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition"
+              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-200 transition  transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
             >
               <Mail size={18} />
             </a>

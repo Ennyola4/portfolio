@@ -6,17 +6,6 @@ const Contact = () => {
     <section id="contact" className="py-24 px-6 bg-white">
       <div className="container mx-auto max-w-2xl text-center">
 
-        {/* Section Label */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className=" text-sm mb-4"
-        >
-          04. What's Next?
-        </motion.p>
-
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

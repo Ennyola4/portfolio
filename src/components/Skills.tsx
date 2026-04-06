@@ -52,7 +52,6 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-[#64ffda] font-mono text-xl">03.</span>
           Skills & Technologies
           <span className="h-px bg-gray-300 flex-1 max-w-xs" />
         </motion.h2>
