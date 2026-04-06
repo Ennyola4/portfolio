@@ -295,9 +295,9 @@ const handleDownloadResume = () => {
           {/* Logo */}
           <a
             href="#"
-            className="text-xl font-semibold tracking-tight "
+            className="text-xl font-semibold tracking-tight transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 "
           >
-            <span className="font-bold hover:bg-[#D8C99B]/80">Enitan</span>
+            <span className="font-bold ">Enitan</span>
           </a>
 
           {/* Desktop Nav */}
@@ -306,7 +306,7 @@ const handleDownloadResume = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium  hover:text-gray-200 transition"
+                className="text-sm font-medium  transition transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
               >
                 {item.label}
               </a>

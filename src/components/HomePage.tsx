@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
 
 import { type Variants } from "framer-motion";
 
@@ -68,8 +68,9 @@ const HomePage = () => {
 
                         <a
                             href="#contact"
-                            className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+                            className="px-6 py-3 border border-gray-300 items-center flex rounded-lg hover:bg-gray-100 transition"
                         >
+                            <User className="inline mr-2 "/>
                             Contact
                         </a>
                     </motion.div>

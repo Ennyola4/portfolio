@@ -9,21 +9,21 @@ import Skills from "./components/Skills"
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <HomePage/>
-      <section id="about">
-        <About/>
-      </section>
+      <Navbar />
+      <HomePage />
       <section id="projects">
-        <Projects/>
+        <Projects />
+        <section id="about">
+          <About />
+        </section>
       </section>
       <section id="skills">
-        <Skills/>
+        <Skills />
       </section>
       <section id="contact">
-        <Contact/>
+        <Contact />
       </section>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
