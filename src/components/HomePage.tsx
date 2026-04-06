@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, User } from "lucide-react";
-
 import { type Variants } from "framer-motion";
+import  pic1  from "/pic1.jpeg";
+import pic2 from "/pic2.jpeg";
 
 const container: Variants = {
     hidden: {},
@@ -85,8 +86,8 @@ const HomePage = () => {
                 >
                     <motion.img
                         variants={item}
-                        src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
-                        className="rounded-xl object-cover h-40 w-full"
+                        src={pic1}
+                        className="rounded-xl object-cover h-45 w-full"
                     />
 
                     <motion.img
@@ -103,8 +104,8 @@ const HomePage = () => {
 
                     <motion.img
                         variants={item}
-                        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-                        className="rounded-xl object-cover h-40 w-full"
+                        src={pic2}
+                        className="rounded-xl object-cover h-45 w-full"
                     />
                 </motion.div>
             </div>
