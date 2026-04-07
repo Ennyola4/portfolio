@@ -163,7 +163,7 @@ const Navbar = ({
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* Logo */}
-          <span className="text-xl font-bold">Enitan</span>
+          <a href="/" className="text-xl font-bold hover:text-blue-500">Enitan</a>
 
           {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center gap-8">
