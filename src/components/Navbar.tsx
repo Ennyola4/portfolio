@@ -1,5 +1,6 @@
 import { ArrowBigDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -8,6 +9,8 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
+
+
 const Navbar = ({
   open,
   setOpen,
@@ -15,6 +18,19 @@ const Navbar = ({
   open: boolean;
   setOpen: (val: boolean) => void;
 }) => {
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // cleanup (important)
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
 
   // ✅ DOWNLOAD RESUME FUNCTION (FIXED)
   const handleDownloadResume = () => {
