@@ -29,7 +29,7 @@ const item: Variants = {
 const HomePage = () => {
     return (
         <section className="min-h-screen bg-white text-gray-900 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 mt-20 grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-7xl mx-auto px-6  grid md:grid-cols-2 gap-12 items-center">
                 {/* LEFT SIDE */}
                 <div>
                     <motion.h1
@@ -82,7 +82,7 @@ const HomePage = () => {
                     variants={container}
                     initial="hidden"
                     animate="show"
-                    className="grid grid-cols-2 gap-4  sm:mt-40 lg:mt-20 md:mt-4-"
+                    className="grid grid-cols-2 gap-4  sm:mt-20  "
                 >
                     <motion.img
                         variants={item}

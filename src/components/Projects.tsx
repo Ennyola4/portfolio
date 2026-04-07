@@ -85,7 +85,7 @@ const Projects = () => {
                 <ul className={`flex flex-wrap gap-3 mb-6 text-sm font-mono text-gray-600 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
                   {project.tech.map((tech) => <li key={tech}>{tech}</li>)}
                 </ul>
-                <div className={`flex gap-3 items-center ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
+                <div className={`flex gap-3 items-center text-gray-400 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
                   <a href={project.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
                     <MapPin size={20} className="animate-bounce" />
                     <span>{project.Address}</span>
