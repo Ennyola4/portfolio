@@ -3,6 +3,8 @@ import { ArrowRight, User } from "lucide-react";
 import { type Variants } from "framer-motion";
 import  pic1  from "/pic1.jpeg";
 import pic2 from "/pic2.jpeg";
+import coding from "/coding.jpg";
+import coding2 from "/coding.jpg";
 
 const container: Variants = {
     hidden: {},
@@ -92,13 +94,13 @@ const HomePage = () => {
 
                     <motion.img
                         variants={item}
-                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                        src={coding}
                         className="rounded-xl object-cover h-60 w-full"
                     />
 
                     <motion.img
                         variants={item}
-                        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+                        src={coding2}
                         className="rounded-xl object-cover h-60 w-full"
                     />
 
