@@ -4,7 +4,7 @@ import { type Variants } from "framer-motion";
 import  pic1  from "/pic1.jpeg";
 import pic2 from "/pic2.jpeg";
 import coding from "/coding.jpg";
-import coding2 from "/coding.jpg";
+import coding2 from "/coding2.jpg";
 
 const container: Variants = {
     hidden: {},
