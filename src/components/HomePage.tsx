@@ -84,7 +84,7 @@ const HomePage = () => {
                     variants={container}
                     initial="hidden"
                     animate="show"
-                    className="grid grid-cols-2 gap-4  sm:mt-20  "
+                    className="grid grid-cols-2 gap-4  sm:mt-5 "
                 >
                     <motion.img
                         variants={item}
