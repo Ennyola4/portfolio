@@ -26,7 +26,14 @@ const featuredProjects = [
     href: "https://elancitravels.onrender.com/",
     image: "/elanciTravels.png",
   },
-  
+  {
+    title: "Goldbucks",
+    description: "Goldbucks is your all-in-one investment platform. From target savings to group investments and Bucksfield Naira & Dollar funds - build your wealth with confidence.",
+    tech: ["React", "TypeScript", "Firebase"],
+    Address: "goldbucks.alertmfb.com.ng",
+    href: "https://www.goldbucks.alertmfb.com.ng/",
+    image: "/goldbucks.png",
+  }
 ];
 
 
@@ -77,18 +84,18 @@ const Projects = () => {
               {/* Project Content */}
               <div className={`md:col-span-6 ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : 'md:col-start-7'} md:absolute md:inset-0 flex flex-col justify-center px-4 md:px-0`}
               >
-                <p className="text-[#64ffda] font-mono text-sm mb-2">Featured Project</p>
-                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">{project.title}</h3>
+                <p className="text-yellow-500 font-mono text-sm mb-2">Featured Project</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-4">{project.title}</h3>
                 <div className="bg-gray-100 p-6 rounded-2xl shadow-md mb-4 border border-gray-200">
-                  <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{project.description}</p>
                 </div>
-                <ul className={`flex flex-wrap gap-3 mb-6 text-sm font-mono text-gray-600 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
+                <ul className={`flex flex-wrap gap-3 mb-6 text-sm font-mono text-yellow-500 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
                   {project.tech.map((tech) => <li key={tech}>{tech}</li>)}
                 </ul>
-                <div className={`flex gap-3 items-center text-gray-400 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
+                <div className={`flex gap-3 items-center text-yellow-500 ${index % 2 === 1 ? 'md:justify-end' : ''}`}>
                   <a href={project.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
-                    <MapPin size={20} className="animate-bounce" />
-                    <span>{project.Address}</span>
+                    <MapPin size={20} className="animate-bounce text-yellow-500" />
+                    <span className="text-yellow-500">{project.Address}</span>
                   </a>
                 </div>
               </div>

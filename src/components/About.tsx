@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-
+import me from "/me.jpeg";
 const About = () => {
   return (
     <section id="about" className="py-24 bg-white text-gray-900">
@@ -77,7 +77,7 @@ const About = () => {
 
             {/* Image */}
             <img
-              src="https://media.craiyon.com/2024-09-19/pTqdzlorS-uGf367PYXzSA.webp"
+              src={me}
               alt="Enitan Ajayi"
               className="relative w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl shadow-lg"
             />
