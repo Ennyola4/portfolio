@@ -1,6 +1,28 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import me from "/me.jpeg";
+
+
+const socialLinks = [
+  {
+    href: "https://github.com/Ennyola4",
+    icon: Github,
+    label: "GitHub",
+    bgColor: "bg-black/90"
+  },
+  {
+    href: "https://www.linkedin.com/in/enitan-ajayi-02829a3a7/",
+    icon: Linkedin,
+    label: "LinkedIn",
+    bgColor: "bg-blue-500"
+  },
+  {
+    href: "https://mail.google.com/mail/u/0/#inbox",
+    icon: Mail,
+    label: "Email",
+    bgColor: "bg-red-500"
+  }
+];
 const About = () => {
   return (
     <section id="about" className="py-24 bg-white text-gray-900">
@@ -35,31 +57,17 @@ const About = () => {
 
           {/* SOCIALS */}
           <div className="flex gap-4 mt-8">
-            <a
-              href="https://github.com/Ennyola4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-200  transition transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
-            >
-              <Github size={18} />
-              
-            </a>
-            <a
-              href="https://www.linkedin.com/in/enitan-ajayi-02829a3a7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-200 transition  transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
-            >
-              <Linkedin size={18} />
-            </a>
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg border border-gray-200 hover:bg-gray-200 transition  transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
-            >
-              <Mail size={18} />
-            </a>
+            {socialLinks.map(({ href, icon: Icon, label, bgColor }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-2 rounded-full shadow-md ${bgColor} text-white font-bold transition transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95`}
+              >
+                <Icon size={20} />
+              </a>
+            ))}
           </div>
         </motion.div>
 
@@ -79,7 +87,7 @@ const About = () => {
             <img
               src={me}
               alt="Enitan Ajayi"
-              className="relative w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl shadow-lg"
+              className="relative w-82 h-82 md:w-80 md:h-80 object-cover rounded-2xl shadow-lg"
             />
           </div>
         </motion.div>
