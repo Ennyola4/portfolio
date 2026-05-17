@@ -25,7 +25,7 @@ const App = () => {
           borderRadius: open ? "16px" : "0px",
         }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="pt-20 bg-white min-h-screen"
+        className="pt-10 bg-white min-h-screen"
       >
         <HomePage />
 
