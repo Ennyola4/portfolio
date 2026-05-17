@@ -196,7 +196,7 @@ const Skills = () => {
           <motion.div
             className="absolute -top-40 -left-40 w-[420px] h-[420px] rounded-full opacity-[0.08] blur-3xl"
             style={{ 
-              background: "#cfff47",
+              background: "#4787ff",
               x: mousePosition.x * 50,
               y: mousePosition.y * 30,
             }}
@@ -262,14 +262,14 @@ const Skills = () => {
             <div className="flex items-center gap-3 mb-5">
               <motion.div 
                 className="h-px w-10" 
-                style={{ background: "#cfff4755" }}
+                style={{ background: "#4787ff" }}
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8 }}
               />
               <motion.span
                 className="text-xs font-mono tracking-[0.22em] uppercase"
-                style={{ color: "#cfff47", fontFamily: "'DM Sans', sans-serif" }}
+                style={{ color: "#4787ff", fontFamily: "'DM Sans', sans-serif" }}
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -288,12 +288,12 @@ const Skills = () => {
               >
                 Skills &{" "}
                 <motion.span 
-                  style={{ color: "#cfff47" }}
+                  style={{ color: "#4787ff" }}
                   animate={{ 
                     textShadow: [
-                      "0 0 0px #cfff47",
-                      "0 0 15px #cfff47",
-                      "0 0 0px #cfff47"
+                      "0 0 0px #4787ff",
+                      "0 0 15px #4787ff",
+                      "0 0 0px #4787ff"
                     ]
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
@@ -311,7 +311,7 @@ const Skills = () => {
               >
                 <motion.path
                   d="M2 8 Q20 4 40 8 Q60 12 80 8 Q100 4 120 8 Q140 12 158 8"
-                  stroke="#cfff47"
+                  stroke="#4787ff"
                   strokeWidth="2"
                   strokeLinecap="round"
                   initial={{ pathLength: 0, opacity: 0 }}
@@ -348,10 +348,10 @@ const Skills = () => {
                   className="flex items-center gap-3"
                   whileHover={{ scale: 1.05, x: 5 }}
                 >
-                  <stat.icon size={24} style={{ color: "#cfff47" }} />
+                  <stat.icon size={24} style={{ color: "#4787ff" }} />
                   <div>
-                    <div className="text-2xl font-bold" style={{ color: "#cfff47" }}>
-                      <AnimatedCounter value={stat.value} accent="#cfff47" />
+                    <div className="text-2xl font-bold" style={{ color: "#4787ff" }}>
+                      <AnimatedCounter value={stat.value} accent="#4787ff" />
                       {stat.suffix || ""}
                     </div>
                     <div className="text-xs" style={{ color: "#6b6b6b" }}>{stat.label}</div>
@@ -518,9 +518,9 @@ const Skills = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 px-8 py-3 rounded-full text-sm font-semibold relative overflow-hidden group"
               style={{
-                background: "rgba(207,255,71,0.1)",
-                border: "1px solid #cfff4730",
-                color: "#cfff47",
+                background: "rgba(71, 141, 255, 0.1)",
+                border: "1px solid #5c47ff30",
+                color: "#4787ff",
                 fontFamily: "'Syne', sans-serif",
               }}
             >
@@ -545,7 +545,7 @@ const Skills = () => {
         {/* Decorative floating elements */}
         <motion.div
           className="absolute bottom-32 left-10 w-1 h-1 rounded-full"
-          style={{ background: "#cfff47" }}
+          style={{ background: "#4787ff" }}
           animate={{
             scale: [1, 3, 1],
             opacity: [0.3, 0.8, 0.3],

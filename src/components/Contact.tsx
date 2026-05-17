@@ -55,7 +55,7 @@ const Contact = () => {
           {/* Central acid glow */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.06] blur-3xl"
-            style={{ background: "#cfff47" }}
+            style={{ background: "#4787ff" }}
           />
           <div
             className="absolute -bottom-40 -right-32 w-[380px] h-[380px] rounded-full opacity-[0.05] blur-3xl"
@@ -85,14 +85,14 @@ const Contact = () => {
               variants={fadeUp}
               className="flex items-center justify-center gap-3 mb-6"
             >
-              <div className="h-px w-10" style={{ background: "#cfff4755" }} />
+              <div className="h-px w-10" style={{ background: "#4787ff" }} />
               <span
                 className="text-xs font-mono tracking-[0.22em] uppercase"
-                style={{ color: "#cfff47", fontFamily: "'DM Sans', sans-serif" }}
+                style={{ color: "#4787ff", fontFamily: "'DM Sans', sans-serif" }}
               >
                 Let's Talk
               </span>
-              <div className="h-px w-10" style={{ background: "#cfff4755" }} />
+              <div className="h-px w-10" style={{ background: "#4787ff" }} />
             </motion.div>
 
             {/* Heading */}
@@ -106,7 +106,7 @@ const Contact = () => {
               }}
             >
               Get In{" "}
-              <span style={{ color: "#cfff47" }}>Touch</span>
+              <span style={{ color: "#4787ff" }}>Touch</span>
             </motion.h2>
 
             {/* Animated squiggle */}
@@ -119,7 +119,7 @@ const Contact = () => {
               >
                 <motion.path
                   d="M2 8 Q25 4 50 8 Q75 12 100 8 Q125 4 150 8 Q175 12 198 8"
-                  stroke="#cfff47"
+                  stroke="#4787ff"
                   strokeWidth="2"
                   strokeLinecap="round"
                   initial={{ pathLength: 0, opacity: 0 }}
@@ -135,7 +135,7 @@ const Contact = () => {
               variants={fadeUp}
               className="text-base leading-relaxed max-w-xl mx-auto mb-12"
               style={{
-                color: "#9a9080",
+                color: "#80909a",
                 fontFamily: "'DM Sans', sans-serif",
                 fontStyle: "italic",
               }}
@@ -154,7 +154,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-semibold text-base"
                 style={{
                   fontFamily: "'Syne', sans-serif",
-                  background: "#cfff47",
+                  background: "#4787ff",
                   color: "#0c0c0c",
                 }}
               >
@@ -182,8 +182,8 @@ const Contact = () => {
                   background: "rgba(255,255,255,0.04)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#cfff4744";
-                  e.currentTarget.style.color = "#cfff47";
+                  e.currentTarget.style.borderColor = "#47f6ff44";
+                  e.currentTarget.style.color = "#4787ff";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "#ffffff18";
@@ -225,8 +225,8 @@ const Contact = () => {
                   whileHover={{ y: -4 }}
                   className="flex flex-col items-center gap-2 p-5 rounded-2xl"
                   style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid #cfff4718",
+                    background: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid #47a3ff18",
                     borderRadius: "1.5rem 1.5rem 2.5rem 1.5rem",
                   }}
                 >
@@ -234,11 +234,11 @@ const Contact = () => {
                     className="w-9 h-9 rounded-xl flex items-center justify-center mb-1"
                     style={{ background: "#cfff4715", border: "1px solid #cfff4730" }}
                   >
-                    <Icon size={16} style={{ color: "#cfff47" }} />
+                    <Icon size={16} style={{ color: "#4787ff" }} />
                   </div>
                   <span
                     className="text-xs font-mono tracking-widest uppercase"
-                    style={{ color: "#cfff47" }}
+                    style={{ color: "#4787ff" }}
                   >
                     {label}
                   </span>

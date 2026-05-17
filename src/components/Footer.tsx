@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.05]"
-            style={{ background: "#cfff47" }}
+            style={{ background: "#4787ff" }}
           />
 
           <div
@@ -106,8 +106,8 @@ const Footer = () => {
             className="relative overflow-hidden p-8 sm:p-10 mb-16"
             style={{
               borderRadius: "2rem 2rem 3rem 2rem",
-              background: "rgba(255,255,255,0.03)",
-              border: "1px solid rgba(207,255,71,0.12)",
+              background: "rgba(255, 255, 255, 0.03)",
+              border: "1px solid rgba(71, 138, 255, 0.12)",
             }}
           >
             {/* Glow */}
@@ -115,7 +115,7 @@ const Footer = () => {
               className="absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(circle at top left, rgba(207,255,71,0.08), transparent 55%)",
+                  "radial-gradient(circle at top left, rgba(71, 178, 255, 0.08), transparent 55%)",
               }}
             />
 
@@ -125,12 +125,12 @@ const Footer = () => {
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="h-px w-10"
-                    style={{ background: "#cfff4755" }}
+                    style={{ background: "#477eff55" }}
                   />
                   <span
                     className="text-xs font-mono tracking-[0.22em] uppercase"
                     style={{
-                      color: "#cfff47",
+                      color: "#4787ff",
                       fontFamily: "'DM Sans', sans-serif",
                     }}
                   >
@@ -142,18 +142,18 @@ const Footer = () => {
                   className="font-extrabold leading-[0.95]"
                   style={{
                     fontFamily: "'Syne', sans-serif",
-                    fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                    fontSize: "clamp(1.5rem, 4vw, 3.5rem)",
                     color: "#f0ebe0",
                   }}
                 >
                   Have a project in{" "}
-                  <span style={{ color: "#cfff47" }}>mind?</span>
+                  <span style={{ color: "#4787ff" }}>mind?</span>
                 </h2>
 
                 <p
                   className="mt-5 max-w-xl text-base"
                   style={{
-                    color: "#8b857c",
+                    color: "#7c848b",
                     fontFamily: "'DM Sans', sans-serif",
                   }}
                 >
@@ -169,7 +169,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.98 }}
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-full w-fit"
                 style={{
-                  background: "#cfff47",
+                  background: "#4787ff",
                   color: "#0c0c0c",
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
@@ -195,13 +195,13 @@ const Footer = () => {
                   fontFamily: "'Syne', sans-serif",
                 }}
               >
-                Enitan<span style={{ color: "#cfff47" }}>.</span>
+                Enitan<span style={{ color: "#4787ff" }}>.</span>
               </h3>
 
               <p
                 className="mt-5 text-sm leading-relaxed max-w-sm"
                 style={{
-                  color: "#8b857c",
+                  color: "#7c878b",
                   fontFamily: "'DM Sans', sans-serif",
                 }}
               >
@@ -214,7 +214,7 @@ const Footer = () => {
                 href="mailto:hello@example.com"
                 className="inline-flex items-center gap-2 mt-6 text-sm transition-colors duration-300"
                 style={{
-                  color: "#cfff47",
+                  color: "#4787ff",
                   fontFamily: "'DM Sans', sans-serif",
                 }}
               >
@@ -228,7 +228,7 @@ const Footer = () => {
               <h4
                 className="mb-5 text-sm uppercase tracking-[0.2em]"
                 style={{
-                  color: "#cfff47",
+                  color: "#4787ff",
                   fontFamily: "'DM Sans', sans-serif",
                 }}
               >
@@ -264,7 +264,7 @@ const Footer = () => {
               <h4
                 className="mb-5 text-sm uppercase tracking-[0.2em]"
                 style={{
-                  color: "#cfff47",
+                  color: "#4787ff",
                   fontFamily: "'DM Sans', sans-serif",
                 }}
               >
@@ -325,7 +325,7 @@ const Footer = () => {
               href="#top"
               className="inline-flex items-center gap-2 text-sm"
               style={{
-                color: "#cfff47",
+                color: "#4787ff",
                 fontFamily: "'DM Sans', sans-serif",
               }}
             >

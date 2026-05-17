@@ -82,7 +82,7 @@ const CurveDivider = ({ flip = false }: { flip?: boolean }) => (
 
 // ── Animated Counter Component ─────────────────────────────────────────────────
 
-const AnimatedCounter = ({ value, suffix = "", accent = "#cfff47" }: { value: number; suffix?: string; accent?: string }) => {
+const AnimatedCounter = ({ value, suffix = "", accent = "#4787ff" }: { value: number; suffix?: string; accent?: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
 
@@ -214,7 +214,7 @@ const About = () => {
           <motion.div
             className="absolute top-0 right-0 w-[420px] h-[420px] rounded-full opacity-[0.08] blur-3xl"
             style={{ 
-              background: "#cfff47",
+              background: "#4787ff",
               x: mousePosition.x * 50,
               y: mousePosition.y * 30,
             }}
@@ -223,7 +223,7 @@ const About = () => {
           <motion.div
             className="absolute bottom-0 left-0 w-[360px] h-[360px] rounded-full opacity-[0.06] blur-3xl"
             style={{ 
-              background: "#3b82f6",
+              background: "#4787ff",
               x: -mousePosition.x * 40,
               y: -mousePosition.y * 40,
             }}
@@ -279,14 +279,14 @@ const About = () => {
             <motion.div variants={fadeLeft} className="flex items-center gap-3 mb-6">
               <motion.div 
                 className="h-px w-10" 
-                style={{ background: "#cfff4755" }}
+                style={{ background: "#4787ff" }}
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8 }}
               />
               <motion.span
                 className="text-xs font-mono tracking-[0.22em] uppercase"
-                style={{ color: "#cfff47", fontFamily: "'DM Sans', sans-serif" }}
+                style={{ color: "#4787ff", fontFamily: "'DM Sans', sans-serif" }}
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -300,18 +300,18 @@ const About = () => {
               className="font-extrabold leading-[0.95] mb-8"
               style={{
                 fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(2.6rem, 6vw, 5rem)",
+                fontSize: "clamp(1.6rem, 4vw, 3rem)",
                 color: "#f0ebe0",
               }}
             >
               About{" "}
               <motion.span 
-                style={{ color: "#cfff47" }}
+                style={{ color: "#4787ff" }}
                 animate={{ 
                   textShadow: [
-                    "0 0 0px #cfff47",
-                    "0 0 15px #cfff47",
-                    "0 0 0px #cfff47"
+                    "0 0 0px #4787ff",
+                    "0 0 15px #4787ff",
+                    "0 0 0px #4787ff"
                   ]
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -347,8 +347,8 @@ const About = () => {
               >
                 I specialise in{" "}
                 <TypewriterText 
-                  texts={["React", "TypeScript", "Node.js", "UI/UX"]} 
-                  accent="#cfff47" 
+                  texts={["React", "TypeScript", "Node.js","Javascript","Talwind,RTK"]} 
+                  accent="#4787ff" 
                 />
                 {" "} and love creating clean interfaces with great user experience.
               </motion.p>
@@ -377,13 +377,13 @@ const About = () => {
                     y: -5, 
                     scale: 1.1,
                     background: "rgba(207,255,71,0.15)",
-                    borderColor: "#cfff47",
+                    borderColor: "#4787ff",
                   }}
                   onHoverStart={() => setHoveredTrait(t)}
                   onHoverEnd={() => setHoveredTrait(null)}
                   className="px-3 py-1.5 text-xs font-mono rounded-lg border cursor-pointer relative overflow-hidden"
                   style={{
-                    color: "#cfff47",
+                    color: "#4787ff",
                     borderColor: "#cfff4730",
                     background: "rgba(207,255,71,0.06)",
                   }}
@@ -458,11 +458,11 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
                 >
-                  <stat.icon size={20} style={{ color: "#cfff47", margin: "0 auto 8px" }} />
-                  <div className="text-xl font-bold" style={{ color: "#cfff47" }}>
+                  <stat.icon size={20} style={{ color: "#4787ff", margin: "0 auto 8px" }} />
+                  <div className="text-xl font-bold" style={{ color: "#4787ff" }}>
                     <AnimatedCounter value={stat.value} suffix={stat.suffix || ""} />
                   </div>
-                  <div className="text-xs" style={{ color: "#9a9080" }}>{stat.label}</div>
+                  <div className="text-xs" style={{ color: "#4787ff" }}>{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -484,8 +484,8 @@ const About = () => {
               <motion.div
                 className="absolute -bottom-4 -right-4 w-full h-full rounded-3xl"
                 style={{
-                  background: "rgba(207,255,71,0.07)",
-                  border: "1px solid #cfff4720",
+                  background: "rgba(71, 105, 255, 0.07)",
+                  border: "1px solid #4753ff20",
                   borderRadius: "2rem 2rem 4rem 2rem",
                 }}
                 whileHover={{ x: -4, y: -4 }}
@@ -495,8 +495,8 @@ const About = () => {
               <motion.div
                 className="absolute -bottom-8 -right-8 w-full h-full rounded-3xl"
                 style={{
-                  background: "rgba(207,255,71,0.03)",
-                  border: "1px solid #cfff4710",
+                  background: "rgba(86, 71, 255, 0.03)",
+                  border: "1px solid #5947ff10",
                   borderRadius: "2rem 2rem 4rem 2rem",
                 }}
                 whileHover={{ x: -8, y: -8 }}
@@ -556,13 +556,13 @@ const About = () => {
                   <motion.span
                     className="text-sm font-bold"
                     style={{ color: "#f0ebe0", fontFamily: "'Syne', sans-serif" }}
-                    whileHover={{ color: "#cfff47" }}
+                    whileHover={{ color: "#4787ff" }}
                   >
                     Enitan Ajayi
                   </motion.span>
                   <motion.span
                     className="text-xs font-mono"
-                    style={{ color: "#cfff47" }}
+                    style={{ color: "#4787ff" }}
                     animate={{ rotate: [0, 10, -10, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
@@ -584,7 +584,7 @@ const About = () => {
                 
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 className="absolute -top-5 -right-5 px-3 py-1.5 rounded-full text-xs font-mono font-bold shadow-xl cursor-pointer"
-                style={{ background: "#cfff47", color: "#0c0c0c" }}
+                style={{ background: "#4787ff", color: "#0c0c0c" }}
               >
                 <motion.span
                   animate={{ scale: [1, 1.2, 1] }}
@@ -621,7 +621,7 @@ const About = () => {
                   <Github size={13} />
                 </motion.div>
                 GitHub
-                <ArrowUpRight size={11} style={{ color: "#cfff47" }} />
+                <ArrowUpRight size={11} style={{ color: "#4787ff" }} />
               </motion.a>
 
               {/* Second floating badge */}
@@ -632,7 +632,7 @@ const About = () => {
                 }}
                 transition={{ duration: 3.5, repeat: Infinity, delay: 1.5 }}
                 className="absolute -bottom-3 -left-3 px-2 py-1 rounded-full text-[10px] font-mono"
-                style={{ background: "#111", border: "1px solid #cfff4730", color: "#cfff47" }}
+                style={{ background: "#111", border: "1px solid #cfff4730", color: "#4787ff" }}
               >
                 <Sparkles size={10} className="inline mr-1" />
                 5+ Projects
@@ -644,7 +644,7 @@ const About = () => {
         {/* Decorative floating elements */}
         <motion.div
           className="absolute bottom-20 right-20 w-2 h-2 rounded-full"
-          style={{ background: "#cfff47" }}
+          style={{ background: "#4787ff" }}
           animate={{
             scale: [1, 2, 1],
             opacity: [0.5, 1, 0.5],
@@ -653,7 +653,7 @@ const About = () => {
         />
         <motion.div
           className="absolute top-40 left-20 w-1 h-1 rounded-full"
-          style={{ background: "#cfff47" }}
+          style={{ background: "#4787ff" }}
           animate={{
             scale: [1, 3, 1],
             opacity: [0.3, 0.8, 0.3],

@@ -3,8 +3,8 @@ import { ArrowUpRight, Github, Linkedin, Twitter, Sparkles, Code, Briefcase, Use
 import { useEffect, useRef } from "react";
 import pic1 from "/pic1.jpeg";
 import pic2 from "/pic2.jpeg";
-import coding from "/coding.jpg";
-import coding2 from "/coding2.jpg";
+import businessBanking from "/businessBanking.png"
+import goldbucks from "/goldbucks.png"
 
 // ── Variants ────────────────────────────────────────────────────────────────
 
@@ -74,9 +74,9 @@ const HomePage = () => {
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap');
         :root {
           --ink:   #0c0c0c;
-          --cream: #f0ebe0;
-          --acid:  #cfff47;
-          --muted: #6b6b6b;
+          --cream: #e8e9eb;
+          --acid:  #4787ff;
+          --muted: #4f6285;
         }
         .font-display { font-family: 'Syne', sans-serif; }
         .font-body    { font-family: 'DM Sans', sans-serif; }
@@ -196,7 +196,7 @@ const HomePage = () => {
         <motion.div
           className="absolute top-0 left-0 right-0 h-px"
           style={{
-            background: "linear-gradient(90deg, transparent, #cfff47, transparent)",
+            background: "linear-gradient(90deg, transparent, #4787ff transparent)",
             scaleX: useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 1]), { damping: 10 }),
           }}
         />
@@ -228,7 +228,7 @@ const HomePage = () => {
             {/* Headline with enhanced animation */}
             <motion.h1
               variants={fadeUp}
-              className="font-display text-[clamp(2.6rem,6vw,5.5rem)] leading-[0.95] font-bold mb-8 relative"
+              className="font-display text-[clamp(1.6rem,6vw,3.5rem)] leading-[0.95] font-bold mb-8 relative"
               style={{ color: "var(--cream)" }}
             >
               <motion.span
@@ -258,7 +258,7 @@ const HomePage = () => {
                 >
                   <motion.path
                     d="M2 6 Q30 2 55 6 Q80 10 110 6 Q140 2 165 6 Q190 10 218 6"
-                    stroke="#cfff47"
+                    stroke="#84abf3"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeDasharray="300"
@@ -274,7 +274,7 @@ const HomePage = () => {
                 }}
                 transition={{ duration: 5, repeat: Infinity }}
                 className="bg-gradient-to-r from-var(--cream) via-var(--acid) to-var(--cream) bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(90deg, #f0ebe0, #cfff47, #f0ebe0)" }}
+                style={{ backgroundImage: "linear-gradient(90deg, #f0ebe0, #4787ff, #f0ebe0)" }}
               >
                 That Stand Out
               </motion.span>
@@ -370,7 +370,7 @@ const HomePage = () => {
             {/* Stats strip with counter animation */}
             <motion.div
               variants={fadeUp}
-              className="flex gap-8 mt-14 pt-8 border-t"
+              className="flex gap-8 mt-5 pt-4 border-t"
               style={{ borderColor: "#ffffff0f" }}
             >
               {[
@@ -451,7 +451,7 @@ const HomePage = () => {
               transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
             >
               <div className="relative overflow-hidden">
-                <img src={coding} alt="" className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={goldbucks} alt="" className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110" />
                 <motion.div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <motion.div
                   className="absolute inset-0 bg-white/20"
@@ -472,7 +472,7 @@ const HomePage = () => {
               transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
             >
               <div className="relative overflow-hidden">
-                <img src={coding2} alt="" className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={businessBanking} alt="" className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110" />
                 <motion.div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>

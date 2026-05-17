@@ -643,7 +643,7 @@ const Projects = () => {
               />
               <motion.span
                 className="text-xs font-mono tracking-[0.25em] uppercase"
-                style={{ color: "#cfff47", fontFamily: "'DM Sans', sans-serif" }}
+                style={{ color: "#4787ff", fontFamily: "'DM Sans', sans-serif" }}
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -659,22 +659,22 @@ const Projects = () => {
             </div>
 
             <motion.h2
-              className="font-extrabold tracking-tight mb-5"
+              className="font-bold tracking-tight mb-5"
               style={{
                 fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
+                fontSize: "clamp(1.8rem, 5vw, 3.5rem)",
                 color: "#f0ebe0",
                 lineHeight: 0.95,
               }}
             >
               Things I&apos;ve{" "}
               <motion.span 
-                style={{ color: "#cfff47" }}
+                style={{ color: "#4787ff" }}
                 animate={{ 
                   textShadow: [
-                    "0 0 0px #cfff47",
-                    "0 0 10px #cfff47",
-                    "0 0 0px #cfff47"
+                    "0 0 0px #4787ff",
+                    "0 0 10px #4787ff",
+                    "0 0 0px #4787ff"
                   ]
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -686,7 +686,7 @@ const Projects = () => {
             <motion.p
               className="text-base max-w-lg mx-auto"
               style={{
-                color: "#6b6b6b",
+                color: "#a9a9a9",
                 fontFamily: "'DM Sans', sans-serif",
                 fontStyle: "italic",
               }}
@@ -705,7 +705,7 @@ const Projects = () => {
             >
               <motion.path
                 d="M2 8 Q30 4 60 8 Q90 12 120 8 Q150 4 180 8 Q210 12 238 8"
-                stroke="#cfff47"
+                stroke="#4787ff"
                 strokeWidth="2"
                 strokeLinecap="round"
                 initial={{ pathLength: 0, opacity: 0 }}
@@ -734,11 +734,11 @@ const Projects = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
                   <div className="text-2xl mb-1">{stat.icon}</div>
-                  <div className="text-2xl font-bold" style={{ color: "#cfff47" }}>
-                    <AnimatedCounter value={stat.value} accent="#cfff47" />
+                  <div className="text-2xl font-bold" style={{ color: "#4787ff" }}>
+                    <AnimatedCounter value={stat.value} accent="#4787ff" />
                     {stat.suffix || ""}
                   </div>
-                  <div className="text-xs" style={{ color: "#6b6b6b" }}>{stat.label}</div>
+                  <div className="text-sm" style={{ color: "#6b6b6b" }}>{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -772,7 +772,7 @@ const Projects = () => {
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-sm relative overflow-hidden group"
               style={{
                 fontFamily: "'Syne', sans-serif",
-                background: "#cfff47",
+                background: "#4787ff",
                 color: "#0c0c0c",
               }}
             >

@@ -303,7 +303,7 @@ const Navbar = ({
             style={{ color: "#f0ebe0" }}
           >
             Enitan
-            <span style={{ color: "#cfff47" }}>.</span>
+            <span style={{ color: "#4787ff" }}>.</span>
           </a>
 
           {/* Desktop links */}
@@ -325,8 +325,8 @@ const Navbar = ({
               onClick={handleDownloadResume}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
-              style={{ background: "#cfff47", color: "#0c0c0c" }}
+              className="inline-flex items-center cursor-pointer gap-2 px-4 py-2 rounded-full text-sm font-semibold"
+              style={{ background: "#4787ff", color: "#ffffff" }}
             >
               <Download className="w-3.5 h-3.5" />
               Resume
@@ -401,7 +401,7 @@ const Navbar = ({
                   {item.label}
                   <span
                     className="text-xs opacity-0 group-hover:opacity-100 transition-opacity"
-                    style={{ color: "#cfff47" }}
+                    style={{ color: "#4787ff" }}
                   >
                     →
                   </span>
@@ -415,7 +415,7 @@ const Navbar = ({
                 onClick={handleDownloadResume}
                 whileTap={{ scale: 0.97 }}
                 className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full font-semibold text-sm"
-                style={{ background: "#cfff47", color: "#0c0c0c" }}
+                style={{ background: "#4787ff", color: "#0c0c0c" }}
               >
                 <Download className="w-4 h-4" />
                 Download Resume
