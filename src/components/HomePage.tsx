@@ -74,7 +74,7 @@ const HomePage = () => {
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap');
         :root {
           --ink:   #0c0c0c;
-          --cream: #e8e9eb;
+          --cream: #ffffff;
           --acid:  #4787ff;
           --muted: #4f6285;
         }
@@ -147,7 +147,7 @@ const HomePage = () => {
               ease: "linear",
             }}
             className="absolute top-20 -left-40 w-96 h-96 rounded-full opacity-20 blur-3xl"
-            style={{ background: "radial-gradient(circle, #cfff47, transparent)" }}
+            style={{ background: "radial-gradient(circle, #4787ff, transparent)" }}
           />
           
           <motion.div
@@ -162,7 +162,7 @@ const HomePage = () => {
               ease: "linear",
             }}
             className="absolute bottom-20 -right-40 w-96 h-96 rounded-full opacity-20 blur-3xl"
-            style={{ background: "radial-gradient(circle, #ff6b6b, transparent)" }}
+            style={{ background: "radial-gradient(circle, #4787ff, transparent)" }}
           />
 
           {/* Floating Particles */}
@@ -228,7 +228,7 @@ const HomePage = () => {
             {/* Headline with enhanced animation */}
             <motion.h1
               variants={fadeUp}
-              className="font-display text-[clamp(1.6rem,6vw,3.5rem)] leading-[0.95] font-bold mb-8 relative"
+              className="font-display text-[clamp(2.6rem,6vw,3.5rem)] leading-[0.95] font-bold mb-8 relative"
               style={{ color: "var(--cream)" }}
             >
               <motion.span
@@ -247,24 +247,7 @@ const HomePage = () => {
               >
                 Products
                 {/* Animated underline squiggle */}
-                <motion.svg
-                  viewBox="0 0 220 10"
-                  className="absolute -bottom-2 left-0 w-full"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 1.5, delay: 0.5 }}
-                >
-                  <motion.path
-                    d="M2 6 Q30 2 55 6 Q80 10 110 6 Q140 2 165 6 Q190 10 218 6"
-                    stroke="#84abf3"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeDasharray="300"
-                    strokeDashoffset="0"
-                  />
-                </motion.svg>
+              
               </motion.span>
               <br />
               <motion.span
@@ -288,7 +271,7 @@ const HomePage = () => {
             >
               I'm{" "}
               <motion.strong
-                whileHover={{ scale: 1.05, color: "#cfff47" }}
+                whileHover={{ scale: 1.05, color: "rgb(89, 97, 252)" }}
                 transition={{ type: "spring", stiffness: 300 }}
                 style={{ color: "var(--cream)", fontStyle: "normal", fontWeight: 400, display: "inline-block" }}
               >
