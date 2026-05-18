@@ -259,7 +259,7 @@ const HomePage = () => {
                 className="bg-gradient-to-r from-var(--cream) via-var(--acid) to-var(--cream) bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(90deg, #f0ebe0, #4787ff, #f0ebe0)" }}
               >
-                That Stand Out
+                That Stands Out
               </motion.span>
             </motion.h1>
 
