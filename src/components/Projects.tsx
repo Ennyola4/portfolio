@@ -28,8 +28,8 @@ const featuredProjects: Project[] = [
     description:
       "An all-in-one investment platform. From target savings to group investments and Bucksfield Naira & Dollar funds — build your wealth with confidence.",
     tech: ["React", "TypeScript", "Firebase"],
-    address: "goldbucks.alertmfb.com.ng",
-    href: "https://www.goldbucks.alertmfb.com.ng/",
+    address: "goldbucks.ng",
+    href: "https://www.goldbucks.ng/",
     image: "/goldbucks.png",
     accent: "#F59E0B",
     tag: "Fintech",

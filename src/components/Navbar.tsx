@@ -196,11 +196,13 @@ const buildResumeHTML = () => `<!DOCTYPE html>
         <li>Built an accessible interface for the Alert Group Scholarship Platform.</li>
         <li>Worked with CMS tools to ensure scalability, content management, and maintainability.</li>
         <li>Improved middleware through clean UI design and optimised navigation.</li>
+        <li>Designed a Solar Energy website GreenBucks</li>
+        <li>Designed a landing page for a savings App GoldBucks</li>
       </ul>
     </div>
 
     <div class="exp-entry">
-      <div class="exp-title">Full Stack Developer — Freelance</div>
+      <div class="exp-title">Full Stack Developer — Elanci Travels</div>
       <div class="exp-meta">May 2023 – Jan 2026</div>
       <ul>
         <li>Built and maintained modern web applications using React and Node.js.</li>
