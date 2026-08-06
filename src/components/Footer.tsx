@@ -61,9 +61,18 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  {
+    icon: Github,
+    url: "https://github.com/Ennyola4",
+  },
+  {
+    icon: Linkedin,
+    url: "https://www.linkedin.com/in/enitan-ajayi-02829a3a7/",
+  },
+  {
+    icon: Twitter,
+    url: "https://x.com/realennyitan",
+  },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -271,24 +280,25 @@ const Footer = () => {
                 Connect
               </h4>
 
-              <div className="flex items-center gap-4">
-                {socialLinks.map((social) => (
+              <motion.div className="mt-8 flex gap-4">
+                {socialLinks.map(({ icon: Icon, url }, index) => (
                   <motion.a
-                    key={social.label}
-                    href={social.href}
-                    whileHover={{ y: -4 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300"
-                    style={{
-                      background: "rgba(255,255,255,0.03)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                      color: "#f0ebe0",
-                    }}
+                    key={index}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, y: -3 }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4 + index * 0.1 }}
+                    className="rounded-full p-2 transition-colors duration-300 hover:bg-white/10"
+                    style={{ color: "var(--muted)" }}
                   >
-                    <social.icon size={18} />
+                    <Icon size={20} />
                   </motion.a>
                 ))}
-              </div>
+              </motion.div>
 
               {/* Mini quote */}
               <p

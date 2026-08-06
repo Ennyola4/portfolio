@@ -7,6 +7,22 @@ import businessBanking from "/businessBanking.png"
 import goldbucks from "/goldbucks.png"
 import me from "/me.jpeg"
 
+
+const socialLinks = [
+  {
+    icon: Github,
+    url: "https://github.com/Ennyola4",
+  },
+  {
+    icon: Linkedin,
+    url: "https://www.linkedin.com/in/enitan-ajayi-02829a3a7/",
+  },
+  {
+    icon: Twitter,
+    url: "https://x.com/realennyitan",
+  },
+];
+
 // ── Variants ────────────────────────────────────────────────────────────────
 
 const container: Variants = {
@@ -150,7 +166,7 @@ const HomePage = () => {
             className="absolute top-20 -left-40 w-96 h-96 rounded-full opacity-20 blur-3xl"
             style={{ background: "radial-gradient(circle, #4787ff, transparent)" }}
           />
-          
+
           <motion.div
             animate={{
               x: ["20%", "-20%", "20%"],
@@ -204,9 +220,9 @@ const HomePage = () => {
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 w-full grid md:grid-cols-[1fr_1fr] gap-16 items-center relative z-10">
           {/* ════ LEFT — TEXT ════ */}
-          <motion.div 
-            variants={container} 
-            initial="hidden" 
+          <motion.div
+            variants={container}
+            initial="hidden"
             animate="show"
             style={{ y, opacity, scale }}
           >
@@ -248,11 +264,11 @@ const HomePage = () => {
               >
                 Products
                 {/* Animated underline squiggle */}
-              
+
               </motion.span>
               <br />
               <motion.span
-                animate={{ 
+                animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   backgroundSize: ["200% auto", "200% auto", "200% auto"]
                 }}
@@ -333,17 +349,19 @@ const HomePage = () => {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div variants={fadeUp} className="flex gap-4 mt-8">
-              {[Github, Linkedin, Twitter].map((Icon, index) => (
+            <motion.div variants={fadeUp} className="mt-8 flex gap-4">
+              {socialLinks.map(({ icon: Icon, url }, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -3 }}
                   whileTap={{ scale: 0.9 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="p-2 rounded-full transition-colors duration-300 hover:bg-white/10"
+                  className="rounded-full p-2 transition-colors duration-300 hover:bg-white/10"
                   style={{ color: "var(--muted)" }}
                 >
                   <Icon size={20} />
@@ -422,8 +440,8 @@ const HomePage = () => {
                   style={{ transform: "skewX(-15deg)" }}
                 />
               </div>
-             
-             
+
+
             </motion.div>
 
             {/* Card 2 — top-right, tilt right */}
