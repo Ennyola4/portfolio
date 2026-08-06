@@ -30,7 +30,7 @@ const traits = ["React", "TypeScript", "Node.js", "UI/UX", "Fintech"];
 const achievements = [
   { label: "Projects Completed", value: 13, icon: Code },
   { label: "Happy Clients", value: 96, suffix: "%", icon: Heart },
-  { label: "Years Experience", value: 3, icon: User },
+  { label: "Years Experience", value: 4, icon: User },
 ];
 
 // ── Variants ──────────────────────────────────────────────────────────────────

@@ -161,7 +161,7 @@ const Skills = () => {
   const stats = [
     { label: "Technologies", value: 15, icon: Cpu, suffix: "+" },
     { label: "Projects Built", value: 13, icon: TrendingUp },
-    { label: "Years Coding", value: 3, icon: Award },
+    { label: "Years Coding", value: 4, icon: Award },
   ];
 
   return (

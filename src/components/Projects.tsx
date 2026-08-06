@@ -725,7 +725,7 @@ const Projects = () => {
               {[
                 { label: "Projects Completed", value: 13, icon: "🚀" },
                 { label: "Happy Clients", value: 96, suffix: "%", icon: "⭐" },
-                { label: "Years Experience", value: 3, icon: "✨" },
+                { label: "Years Experience", value: 4, icon: "✨" },
               ].map((stat, idx) => (
                 
                 <motion.div

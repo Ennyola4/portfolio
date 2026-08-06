@@ -5,6 +5,7 @@ import pic1 from "/pic1.jpeg";
 import pic2 from "/pic2.jpeg";
 import businessBanking from "/businessBanking.png"
 import goldbucks from "/goldbucks.png"
+import me from "/me.jpeg"
 
 // ── Variants ────────────────────────────────────────────────────────────────
 
@@ -357,9 +358,9 @@ const HomePage = () => {
               style={{ borderColor: "#ffffff0f" }}
             >
               {[
-                { n: 3, label: "Years exp.", icon: Code },
+                { n: 4, label: "Years exp.", icon: Code },
                 { n: 13, label: "Projects shipped", icon: Briefcase },
-                { n: 96, label: "Client satisfaction", icon: Users },
+                { n: 98, label: "Client satisfaction", icon: Users },
               ].map(({ n, label, icon: Icon }) => (
                 <motion.div
                   key={label}
@@ -409,7 +410,7 @@ const HomePage = () => {
               transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
             >
               <div className="relative overflow-hidden">
-                <img src={pic1} alt="" className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={me} alt="" className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110" />
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
