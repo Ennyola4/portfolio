@@ -180,7 +180,7 @@ const buildResumeHTML = () => `<!DOCTYPE html>
   <div class="section">
     <div class="section-title">Technical Skills</div>
     <div class="skills">
-      ${["HTML5","CSS3","JavaScript (ES6+)","TypeScript","React","Redux Toolkit","Zustand","Tailwind CSS","Bootstrap","Node.js","Express","MongoDB","WordPress","Git & GitHub"]
+      ${["HTML5","CSS3","JavaScript (ES6+)","TypeScript","React","Redux Toolkit","Zustand","Tailwind CSS","Bootstrap","Node.js", "NestJs","Express","MongoDB","Git & GitHub"]
         .map(s => `<span class="skill">${s}</span>`).join("")}
     </div>
   </div>
@@ -198,6 +198,7 @@ const buildResumeHTML = () => `<!DOCTYPE html>
         <li>Improved middleware through clean UI design and optimised navigation.</li>
         <li>Designed a Solar Energy website GreenBucks</li>
         <li>Designed a landing page for a savings App GoldBucks</li>
+        
       </ul>
     </div>
 
