@@ -412,7 +412,7 @@ const Navbar = ({
             </nav>
 
             {/* Resume button at bottom */}
-            <div className="px-6 pb-10">
+            <div className=" absolute bottom-20 left-0 right-0 px-6 pb-10">
               <motion.button
                 onClick={handleDownloadResume}
                 whileTap={{ scale: 0.97 }}
