@@ -225,16 +225,16 @@ const Contact = () => {
                   whileHover={{ y: -4 }}
                   className="flex flex-col items-center gap-2 p-5 rounded-2xl"
                   style={{
-                    background: "rgba(255, 255, 255, 0.03)",
+                    background: "rgba(255, 255, 255, 0.94)",
                     border: "1px solid #47a3ff18",
                     borderRadius: "1.5rem 1.5rem 2.5rem 1.5rem",
                   }}
                 >
                   <div
                     className="w-9 h-9 rounded-xl flex items-center justify-center mb-1"
-                    style={{ background: "#cfff4715", border: "1px solid #cfff4730" }}
+                    style={{ background: "#4787ff", border: "1px solid #cfff4730" }}
                   >
-                    <Icon size={16} style={{ color: "#4787ff" }} />
+                    <Icon size={16} style={{ color: "#ffffff" }} />
                   </div>
                   <span
                     className="text-xs font-mono tracking-widest uppercase"
