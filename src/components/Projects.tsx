@@ -27,7 +27,7 @@ const featuredProjects: Project[] = [
     title: "Goldbucks",
     description:
       "An all-in-one investment platform. From target savings to group investments and Bucksfield Naira & Dollar funds — build your wealth with confidence.",
-    tech: ["React", "TypeScript", "Firebase"],
+    tech: ["React", "TypeScript", "Firebase","Strapi", "TailwindCSS"],
     address: "goldbucks.ng",
     href: "https://www.goldbucks.ng/",
     image: "/goldbucks.png",
@@ -38,7 +38,7 @@ const featuredProjects: Project[] = [
     title: "Business Banking",
     description:
       "A secure banking platform for AlertMFB enabling account management, fund transfers, and real-time transaction tracking.",
-    tech: ["React", "Next.js", "Prisma", "Tailwind", "TypeScript"],
+    tech: ["React", "Prisma", "Tailwind", "TypeScript"],
     address: "business.alertmfb.com.ng",
     href: "https://business.alertmfb.com.ng/welcome",
     image: "/businessBanking.png",
@@ -49,7 +49,7 @@ const featuredProjects: Project[] = [
     title: "Greenbucks",
     description:
       "Designed and developed a modern, responsive website for Green Bucks, a solar energy company providing intelligent solar systems for homes and businesses. The website highlights their solar solutions, flexible payment options, and commitment to making clean, reliable energy more accessible. Built with a focus on clean UI, responsive layouts, smooth interactions, and a user-friendly experience..",
-    tech: ["React", "TailwindCSS", "TypeScript"],
+    tech: ["React", "TailwindCSS", "TypeScript","Strapi"],
     address: "greenbucks.com.ng",
     href: "https://www.greenbucks.com.ng/",
     image: "/greenbucks.png",
