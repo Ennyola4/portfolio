@@ -31,7 +31,7 @@ const featuredProjects: Project[] = [
     address: "goldbucks.ng",
     href: "https://www.goldbucks.ng/",
     image: "/goldbucks.png",
-    accent: "#ffba42",
+    accent: "#bb7f19",
     tag: "LIVE",
   },
   {
@@ -42,7 +42,7 @@ const featuredProjects: Project[] = [
     address: "business.alertmfb.com.ng",
     href: "https://business.alertmfb.com.ng/welcome",
     image: "/businessBanking.png",
-    accent: "#1f52e9",
+    accent: "#0b37bb",
     tag: "LIVE",
   },
   {
@@ -53,7 +53,7 @@ const featuredProjects: Project[] = [
     address: "greenbucks.com.ng",
     href: "https://www.greenbucks.com.ng/",
     image: "/greenbucks.png",
-    accent: "#21f916",
+    accent: "#0eb406",
     tag: "LIVE",
   },
   {
@@ -64,7 +64,7 @@ const featuredProjects: Project[] = [
     address: "alertscholarshipportal.com",
     href: "https://alertscholarshiportal.vercel.app/",
     image: "/alertPortal.png",
-    accent: "#3B82F6",
+    accent: "#0b3475",
     tag: "UI Project",
   },
 ];
