@@ -1,78 +1,36 @@
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  ArrowUpRight,
-  Mail,
-} from "lucide-react";
+import { Github, Linkedin, Twitter, ArrowUpRight, Mail } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
 
 // ── Variants ──────────────────────────────────────────────────────────────────
 
-const footerVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
+const stagger: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
 };
 
-const linkVariants: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45 },
-  },
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
-// ── Curved divider ────────────────────────────────────────────────────────────
-
-const CurveDivider = ({ flip = false }: { flip?: boolean }) => (
-  <div
-    className="w-full overflow-hidden pointer-events-none"
-    style={{ transform: flip ? "scaleY(-1)" : undefined, lineHeight: 0 }}
-  >
-    <svg
-      viewBox="0 0 1440 60"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="none"
-      className="w-full h-[60px] block"
-    >
-      <path
-        d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,60 L0,60 Z"
-        fill="#0c0c0c"
-      />
-    </svg>
-  </div>
-);
+const lineReveal: Variants = {
+  hidden: { y: "105%" },
+  show: { y: "0%", transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
+};
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "About",    href: "#about",    index: "01" },
+  { label: "Skills",   href: "#skills",   index: "02" },
+  { label: "Projects", href: "#projects", index: "03" },
+  { label: "Contact",  href: "#contact",  index: "04" },
 ];
 
 const socialLinks = [
-  {
-    icon: Github,
-    url: "https://github.com/Ennyola4",
-  },
-  {
-    icon: Linkedin,
-    url: "https://www.linkedin.com/in/enitan-ajayi-02829a3a7/",
-  },
-  {
-    icon: Twitter,
-    url: "https://x.com/realennyitan",
-  },
+  { icon: Github,   url: "https://github.com/Ennyola4",                              label: "GitHub"   },
+  { icon: Linkedin, url: "https://www.linkedin.com/in/enitan-ajayi-02829a3a7/",        label: "LinkedIn" },
+  { icon: Twitter,  url: "https://x.com/realennyitan",                                 label: "Twitter"  },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -80,187 +38,256 @@ const socialLinks = [
 const Footer = () => {
   return (
     <>
-      <CurveDivider />
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+        ::selection { background: #4787ff; color: #0c0c0c; }
+      `}</style>
 
       <footer
-        className="relative overflow-hidden px-6 py-24"
-        style={{ background: "#0c0c0c" }}
+        className="relative overflow-hidden px-5 sm:px-8 py-20 sm:py-28"
+        style={{ background: "#0c0c0c", borderTop: "1px solid #1a1a1a" }}
       >
-        {/* ── Atmosphere ── */}
+        {/* ── Background ── */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          {/* Dot grid */}
           <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.05]"
-            style={{ background: "#4787ff" }}
-          />
-
-          <div
-            className="absolute inset-0 opacity-[0.025]"
+            className="absolute inset-0 opacity-[0.028]"
             style={{
-              backgroundImage:
-                "radial-gradient(circle, #f0ebe0 1px, transparent 1px)",
-              backgroundSize: "36px 36px",
+              backgroundImage: "radial-gradient(circle, #f0ebe0 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
             }}
           />
+          {/* Single soft glow */}
+          <div
+            className="absolute top-0 -right-40 w-[520px] h-[520px] rounded-full blur-3xl"
+            style={{ background: "#4787ff", opacity: 0.05 }}
+          />
+          {/* Huge "04" watermark */}
+          <div className="absolute -left-10 bottom-0 select-none pointer-events-none">
+            <span
+              className="font-extrabold leading-none"
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: "clamp(12rem, 26vw, 24rem)",
+                color: "#4787ff08",
+                letterSpacing: "-0.05em",
+              }}
+            >
+              04
+            </span>
+          </div>
         </div>
 
-        <motion.div
-          variants={footerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="max-w-6xl mx-auto relative z-10"
-        >
-          {/* ── Top CTA ── */}
-          <div
-            className="relative overflow-hidden p-8 sm:p-10 mb-16"
-            style={{
-              borderRadius: "2rem 2rem 3rem 2rem",
-              background: "rgba(255, 255, 255, 0.03)",
-              border: "1px solid rgba(71, 138, 255, 0.12)",
-            }}
+        <div className="max-w-6xl mx-auto relative z-10">
+
+          {/* ── Top row: eyebrow + meta ── */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center justify-between mb-16 flex-wrap gap-4"
           >
-            {/* Glow */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "radial-gradient(circle at top left, rgba(71, 178, 255, 0.08), transparent 55%)",
-              }}
-            />
+            <div className="flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#4787ff" }} />
+              <span
+                className="text-[10px] font-mono tracking-[0.3em] uppercase"
+                style={{ color: "#6b6b6b" }}
+              >
+                Contact / Sign-off
+              </span>
+            </div>
+            <span
+              className="text-[10px] font-mono tracking-[0.3em] uppercase"
+              style={{ color: "#4a4a4a" }}
+            >
+              Portfolio / 2026
+            </span>
+          </motion.div>
 
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
-              <div className="max-w-2xl">
-                {/* Eyebrow */}
-                <div className="flex items-center gap-3 mb-5">
-                  <div
-                    className="h-px w-10"
-                    style={{ background: "#477eff55" }}
-                  />
-                  <span
-                    className="text-xs font-mono tracking-[0.22em] uppercase"
-                    style={{
-                      color: "#4787ff",
-                      fontFamily: "'DM Sans', sans-serif",
-                    }}
-                  >
-                    Let’s Build Something
-                  </span>
-                </div>
-
-                <h2
-                  className="font-extrabold leading-[0.95]"
-                  style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "clamp(1.5rem, 4vw, 3.5rem)",
-                    color: "#f0ebe0",
-                  }}
-                >
-                  Have a project in{" "}
-                  <span style={{ color: "#4787ff" }}>mind?</span>
-                </h2>
-
-                <p
-                  className="mt-5 max-w-xl text-base"
-                  style={{
-                    color: "#7c848b",
-                    fontFamily: "'DM Sans', sans-serif",
-                  }}
-                >
-                  I create modern, responsive, and production-ready web
-                  experiences with performance and aesthetics in mind.
-                </p>
-              </div>
-
-              {/* CTA button */}
-              <motion.a
-                href="#contact"
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full w-fit"
+          {/* ══ Big sign-off + CTA ══ */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20"
+          >
+            {/* Left: big heading */}
+            <div className="lg:col-span-8">
+              <h2
+                className="font-extrabold leading-[0.92] mb-8"
                 style={{
-                  background: "#4787ff",
-                  color: "#0c0c0c",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "clamp(2.4rem, 6.5vw, 5rem)",
+                  color: "#f0ebe0",
+                  letterSpacing: "-0.02em",
                 }}
               >
-                Start a Project
-                <ArrowUpRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
+                <div className="overflow-hidden">
+                  <motion.span variants={lineReveal} className="block">
+                    Have a project
+                  </motion.span>
+                </div>
+                <div className="overflow-hidden">
+                  <motion.span
+                    variants={lineReveal}
+                    className="block"
+                    transition={{ delay: 0.1, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    in{" "}
+                    <span
+                      className="italic font-light"
+                      style={{ color: "#4787ff", fontFamily: "'DM Sans', sans-serif" }}
+                    >
+                      mind?
+                    </span>
+                  </motion.span>
+                </div>
+              </h2>
+
+              <motion.p
+                variants={fadeUp}
+                className="text-base leading-relaxed max-w-lg mb-10"
+                style={{ color: "#9a9080", fontFamily: "'DM Sans', sans-serif" }}
+              >
+                I create modern, responsive, and production-ready web
+                experiences with performance and aesthetics in mind.
+              </motion.p>
+
+              {/* CTA — text + arrow chip */}
+              <motion.a
+                variants={fadeUp}
+                href="#contact"
+                whileHover={{ x: 6 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                className="inline-flex items-center gap-3 group"
+              >
+                <span
+                  className="text-sm font-mono tracking-[0.2em] uppercase"
+                  style={{ color: "#f0ebe0" }}
+                >
+                  Start a project
+                </span>
+                <motion.span
+                  className="w-11 h-11 rounded-full flex items-center justify-center"
+                  style={{ background: "#4787ff" }}
+                  whileHover={{ rotate: 45 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ArrowUpRight className="w-4 h-4" style={{ color: "#0c0c0c" }} />
+                </motion.span>
               </motion.a>
             </div>
-          </div>
 
-          {/* ── Bottom area ── */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-14">
-            {/* Brand */}
-            <motion.div variants={linkVariants}>
-              <h3
-                className="text-3xl font-extrabold"
-                style={{
-                  color: "#f0ebe0",
-                  fontFamily: "'Syne', sans-serif",
-                }}
+            {/* Right: contact card */}
+            <motion.div
+              variants={fadeUp}
+              className="lg:col-span-4 lg:pt-4"
+            >
+              <div
+                className="rounded-2xl p-6"
+                style={{ background: "#111", border: "1px solid #1f1f1f" }}
               >
-                Enitan<span style={{ color: "#4787ff" }}>.</span>
-              </h3>
+                <div
+                  className="text-[10px] font-mono tracking-[0.25em] uppercase mb-5"
+                  style={{ color: "#4a4a4a" }}
+                >
+                  Direct line
+                </div>
 
-              <p
-                className="mt-5 text-sm leading-relaxed max-w-sm"
-                style={{
-                  color: "#7c878b",
-                  fontFamily: "'DM Sans', sans-serif",
-                }}
-              >
-                Frontend-focused developer crafting immersive digital products
-                with clean code, motion, and modern UI systems.
-              </p>
+                <a
+                  href="mailto:ajayi.enitan45@gmail.com"
+                  className="group flex items-start gap-3 mb-4 transition-colors duration-300"
+                >
+                  <span
+                    className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 border transition-colors duration-300 group-hover:border-[#4787ff55] group-hover:bg-[#4787ff12]"
+                    style={{ borderColor: "#1f1f1f" }}
+                  >
+                    <Mail
+                      size={14}
+                      className="transition-colors duration-300 group-hover:text-[#4787ff]"
+                      style={{ color: "#6b6b6b" }}
+                    />
+                  </span>
+                  <div className="min-w-0">
+                    <div
+                      className="text-[10px] font-mono tracking-widest uppercase mb-1"
+                      style={{ color: "#4a4a4a" }}
+                    >
+                      Email
+                    </div>
+                    <div
+                      className="text-sm break-all transition-colors duration-300 group-hover:text-[#f0ebe0]"
+                      style={{ color: "#9a9080", fontFamily: "'DM Sans', sans-serif" }}
+                    >
+                      ajayi.enitan45@gmail.com
+                    </div>
+                  </div>
+                </a>
 
-              {/* Email */}
-              <a
-                href="mailto:hello@example.com"
-                className="inline-flex items-center gap-2 mt-6 text-sm transition-colors duration-300"
-                style={{
-                  color: "#4787ff",
-                  fontFamily: "'DM Sans', sans-serif",
-                }}
-              >
-                <Mail size={15} />
-                ajayi.enitan45@gmail.com
-              </a>
+                <div className="flex items-center gap-2 mt-6 pt-5 border-t" style={{ borderColor: "#1a1a1a" }}>
+                  <motion.span
+                    animate={{ scale: [1, 1.3, 1], opacity: [1, 0.6, 1] }}
+                    transition={{ duration: 1.8, repeat: Infinity }}
+                    className="w-1.5 h-1.5 rounded-full"
+                    style={{ background: "#0eb406" }}
+                  />
+                  <span
+                    className="text-[11px] font-mono tracking-wider"
+                    style={{ color: "#6b6b6b" }}
+                  >
+                    Available for work
+                  </span>
+                </div>
+              </div>
             </motion.div>
+          </motion.div>
 
+          {/* ══ Nav + Socials ══ */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16 pt-14 border-t"
+            style={{ borderColor: "#1a1a1a" }}
+          >
             {/* Navigation */}
-            <motion.div variants={linkVariants}>
-              <h4
-                className="mb-5 text-sm uppercase tracking-[0.2em]"
-                style={{
-                  color: "#4787ff",
-                  fontFamily: "'DM Sans', sans-serif",
-                }}
+            <motion.div variants={fadeUp}>
+              <div
+                className="text-[10px] font-mono tracking-[0.25em] uppercase mb-6"
+                style={{ color: "#4a4a4a" }}
               >
-                Navigation
-              </h4>
+                Navigate
+              </div>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {navLinks.map((link) => (
                   <li key={link.label}>
                     <motion.a
-                      whileHover={{ x: 4 }}
                       href={link.href}
-                      className="inline-flex items-center gap-2 group"
-                      style={{
-                        color: "#f0ebe0",
-                        fontFamily: "'DM Sans', sans-serif",
-                      }}
+                      className="group flex items-center gap-4 py-2 transition-colors duration-300"
                     >
-                      <span>{link.label}</span>
-
+                      <span
+                        className="text-[10px] font-mono tracking-widest shrink-0 w-5 transition-colors duration-300 group-hover:text-[#4787ff]"
+                        style={{ color: "#4a4a4a" }}
+                      >
+                        {link.index}
+                      </span>
+                      <span
+                        className="text-lg font-bold transition-colors duration-300 group-hover:text-[#4787ff]"
+                        style={{
+                          fontFamily: "'Syne', sans-serif",
+                          color: "#f0ebe0",
+                        }}
+                      >
+                        {link.label}
+                      </span>
                       <ArrowUpRight
-                        size={14}
-                        className="opacity-0 group-hover:opacity-100 transition-all duration-300"
+                        size={13}
+                        className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{ color: "#4787ff" }}
                       />
                     </motion.a>
                   </li>
@@ -269,84 +296,101 @@ const Footer = () => {
             </motion.div>
 
             {/* Socials */}
-            <motion.div variants={linkVariants}>
-              <h4
-                className="mb-5 text-sm uppercase tracking-[0.2em]"
-                style={{
-                  color: "#4787ff",
-                  fontFamily: "'DM Sans', sans-serif",
-                }}
+            <motion.div variants={fadeUp}>
+              <div
+                className="text-[10px] font-mono tracking-[0.25em] uppercase mb-6"
+                style={{ color: "#4a4a4a" }}
               >
                 Connect
-              </h4>
+              </div>
 
-              <motion.div className="mt-8 flex gap-4">
-                {socialLinks.map(({ icon: Icon, url }, index) => (
+              <div className="flex flex-wrap gap-3 mb-8">
+                {socialLinks.map(({ icon: Icon, url, label }) => (
                   <motion.a
-                    key={index}
+                    key={label}
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    whileTap={{ scale: 0.9 }}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                    className="rounded-full p-2 transition-colors duration-300 hover:bg-white/10"
-                    style={{ color: "var(--muted)" }}
+                    aria-label={label}
+                    whileHover={{ y: -3 }}
+                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-full text-sm border transition-colors duration-300 group"
+                    style={{
+                      color: "#f0ebe0",
+                      borderColor: "#1f1f1f",
+                      background: "rgba(255,255,255,0.02)",
+                      fontFamily: "'DM Sans', sans-serif",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = "#4787ff55";
+                      e.currentTarget.style.background = "#4787ff12";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = "#1f1f1f";
+                      e.currentTarget.style.background = "rgba(255,255,255,0.02)";
+                    }}
                   >
-                    <Icon size={20} />
+                    <Icon size={14} />
+                    <span>{label}</span>
+                    <ArrowUpRight
+                      size={11}
+                      className="opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+                      style={{ color: "#4787ff" }}
+                    />
                   </motion.a>
                 ))}
-              </motion.div>
+              </div>
 
-              {/* Mini quote */}
+              {/* Quote */}
               <p
-                className="mt-8 text-sm italic leading-relaxed max-w-xs"
-                style={{
-                  color: "#6f695f",
-                  fontFamily: "'DM Sans', sans-serif",
-                }}
+                className="text-sm italic leading-relaxed max-w-xs"
+                style={{ color: "#6b6b6b", fontFamily: "'DM Sans', sans-serif" }}
               >
-                “Design is how it works — and how it feels.”
+                "Design is how it works — and how it feels."
               </p>
             </motion.div>
-          </div>
+          </motion.div>
 
-          {/* ── Bottom bar ── */}
+          {/* ══ Bottom bar ══ */}
           <div
-            className="mt-16 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4"
-            style={{
-              borderTop: "1px solid rgba(255,255,255,0.06)",
-            }}
+            className="mt-20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+            style={{ borderTop: "1px solid #1a1a1a" }}
           >
-            <p
-              className="text-sm"
-              style={{
-                color: "#6f695f",
-                fontFamily: "'DM Sans', sans-serif",
-              }}
-            >
-              © {new Date().getFullYear()} Enitan Ajayi. All rights reserved.
-            </p>
+            <div className="flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#4787ff" }} />
+              <span
+                className="text-[10px] font-mono tracking-[0.25em] uppercase"
+                style={{ color: "#4a4a4a" }}
+              >
+                © {new Date().getFullYear()} Enitan Ajayi — All rights reserved
+              </span>
+            </div>
 
             <motion.a
-              whileHover={{ y: -2 }}
               href="#top"
-              className="inline-flex items-center gap-2 text-sm"
-              style={{
-                color: "#4787ff",
-                fontFamily: "'DM Sans', sans-serif",
-              }}
+              whileHover={{ x: 4 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              className="inline-flex items-center gap-2 group"
             >
-              Back to top
-              <ArrowUpRight size={14} />
+              <span
+                className="text-[10px] font-mono tracking-[0.25em] uppercase transition-colors duration-300 group-hover:text-[#f0ebe0]"
+                style={{ color: "#6b6b6b" }}
+              >
+                Back to top
+              </span>
+              <span
+                className="w-8 h-8 rounded-full flex items-center justify-center border transition-colors duration-300 group-hover:border-[#4787ff] group-hover:bg-[#4787ff]"
+                style={{ borderColor: "#1f1f1f" }}
+              >
+                <ArrowUpRight
+                  size={12}
+                  className="transition-colors duration-300 group-hover:text-[#0c0c0c]"
+                  style={{ color: "#6b6b6b" }}
+                />
+              </span>
             </motion.a>
           </div>
-        </motion.div>
+        </div>
       </footer>
-
-      <CurveDivider flip />
     </>
   );
 };
